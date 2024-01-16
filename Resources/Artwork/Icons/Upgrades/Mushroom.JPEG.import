@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cjgvfpu60irj0"
-path="res://.godot/imported/Roach Texture.png-bec18f6cd5b700a2986a99307bf5a945.ctex"
+uid="uid://cshj8p50p23gq"
+path="res://.godot/imported/Mushroom.JPEG-3ca9b21848d171543ef1b2a15985e5a6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Resources/Artwork/Roach Texture.png"
-dest_files=["res://.godot/imported/Roach Texture.png-bec18f6cd5b700a2986a99307bf5a945.ctex"]
+source_file="res://Resources/Artwork/Icons/Upgrades/Mushroom.JPEG"
+dest_files=["res://.godot/imported/Mushroom.JPEG-3ca9b21848d171543ef1b2a15985e5a6.ctex"]
 
 [params]
 

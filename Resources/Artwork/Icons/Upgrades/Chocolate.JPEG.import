@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cjgvfpu60irj0"
-path="res://.godot/imported/Roach Texture.png-bec18f6cd5b700a2986a99307bf5a945.ctex"
+uid="uid://bhxvlfqdikov"
+path="res://.godot/imported/Chocolate.JPEG-fb0ada71025b8464d25cb22636b43d43.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Resources/Artwork/Roach Texture.png"
-dest_files=["res://.godot/imported/Roach Texture.png-bec18f6cd5b700a2986a99307bf5a945.ctex"]
+source_file="res://Resources/Artwork/Icons/Upgrades/Chocolate.JPEG"
+dest_files=["res://.godot/imported/Chocolate.JPEG-fb0ada71025b8464d25cb22636b43d43.ctex"]
 
 [params]
 
