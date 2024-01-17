@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://dh3p2jqjj1r5b"]
+[gd_scene load_steps=5 format=3 uid="uid://dh3p2jqjj1r5b"]
 
 [ext_resource type="Texture2D" uid="uid://cjgvfpu60irj0" path="res://Rescources/Artwork/Roach Texture.png" id="2_w40q1"]
 
@@ -6,9 +6,157 @@
 resource_name = "idle"
 length = 2.0
 loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Skeleton2D/Torso:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-129, -128)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Skeleton2D/Torso:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.67575]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Skeleton2D/Torso/LegF1P2/LegF1P2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(70.9238, 1.3493)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Skeleton2D/Torso/LegF1P2/LegF1P2:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [2.56182]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Skeleton2D/Torso/LegF1P2/LegF1P2/LegF1P3:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(113.251, 10.106)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Skeleton2D/Torso/LegF1P2/LegF1P2/LegF1P3:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-1.34057]
+}
+
+[sub_resource type="Animation" id="Animation_ws0om"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Skeleton2D/Torso:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-129, -128)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Skeleton2D/Torso:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.67575]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Skeleton2D/Torso/LegF1P2/LegF1P2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(70.9238, 1.3493)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Skeleton2D/Torso/LegF1P2/LegF1P2:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [2.56182]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Skeleton2D/Torso/LegF1P2/LegF1P2/LegF1P3:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(113.251, 10.106)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Skeleton2D/Torso/LegF1P2/LegF1P2/LegF1P3:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-1.34057]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_qt8bo"]
 _data = {
+"RESET": SubResource("Animation_ws0om"),
 "idle": SubResource("Animation_if038")
 }
 
@@ -33,7 +181,6 @@ internal_vertex_count = 6
 [node name="LegB1P3" type="Polygon2D" parent="polygons/LegB1P2"]
 position = Vector2(-92.6229, 16.4155)
 rotation = 0.582782
-scale = Vector2(1, 1)
 offset = Vector2(-684.371, -622.058)
 texture = ExtResource("2_w40q1")
 skeleton = NodePath("../../../Skeleton2D")
@@ -71,7 +218,6 @@ internal_vertex_count = 5
 [node name="ArmBP3" type="Polygon2D" parent="polygons/ArmBP1"]
 position = Vector2(90.3278, 102.627)
 rotation = -0.0205521
-scale = Vector2(1, 1)
 offset = Vector2(-889.738, -401.733)
 texture = ExtResource("2_w40q1")
 skeleton = NodePath("../../../Skeleton2D")
@@ -169,7 +315,6 @@ internal_vertex_count = 6
 [node name="LegF1P3" type="Polygon2D" parent="polygons/LegF1P1"]
 position = Vector2(-92.6229, 16.4155)
 rotation = 0.582782
-scale = Vector2(1, 1)
 offset = Vector2(-684.371, -622.058)
 texture = ExtResource("2_w40q1")
 skeleton = NodePath("../../../Skeleton2D")
@@ -207,7 +352,6 @@ internal_vertex_count = 5
 [node name="ArmFP3" type="Polygon2D" parent="polygons/ArmFP2"]
 position = Vector2(90.3278, 102.627)
 rotation = -0.0205521
-scale = Vector2(1, 1)
 offset = Vector2(-889.738, -401.733)
 texture = ExtResource("2_w40q1")
 skeleton = NodePath("../../../Skeleton2D")
@@ -291,6 +435,7 @@ bone_angle = 0.0
 [node name="Head" type="Bone2D" parent="Skeleton2D/Torso"]
 position = Vector2(292.571, -56.3959)
 rotation = 1.29789
+scale = Vector2(1, 1)
 rest = Transform2D(0.269532, 0.962991, -0.962991, 0.269532, 292.571, -56.3959)
 auto_calculate_length_and_angle = false
 length = 16.0
@@ -312,7 +457,6 @@ rest = Transform2D(-0.836587, 0.547834, -0.547834, -0.836587, 75.0817, 9.578)
 [node name="LegB1P3" type="Bone2D" parent="Skeleton2D/Torso/LegB1P1/LegB1P2"]
 position = Vector2(113.876, 18.144)
 rotation = -1.34057
-scale = Vector2(1, 1)
 rest = Transform2D(0.2282, -0.973614, 0.973614, 0.2282, 113.876, 18.144)
 auto_calculate_length_and_angle = false
 length = 89.73
@@ -334,7 +478,6 @@ rest = Transform2D(-0.836587, 0.547834, -0.547834, -0.836587, 70.9238, 1.3493)
 [node name="LegF1P3" type="Bone2D" parent="Skeleton2D/Torso/LegF1P2/LegF1P2"]
 position = Vector2(113.251, 10.106)
 rotation = -1.34057
-scale = Vector2(1, 1)
 rest = Transform2D(0.2282, -0.973614, 0.973614, 0.2282, 113.251, 10.106)
 auto_calculate_length_and_angle = false
 length = 89.73
@@ -364,7 +507,6 @@ bone_angle = -6.486
 [node name="LegF2P2" type="Bone2D" parent="Skeleton2D/Torso"]
 position = Vector2(116.933, 41.1917)
 rotation = 0.131839
-scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, 116.933, 41.1917)
 auto_calculate_length_and_angle = false
 length = 48.8774
@@ -373,13 +515,14 @@ bone_angle = 7.9549
 [node name="LegF2P2" type="Bone2D" parent="Skeleton2D/Torso/LegF2P2"]
 position = Vector2(48.4071, 6.76432)
 rotation = 2.34227
+scale = Vector2(1, 1)
 rest = Transform2D(-0.741291, 0.671184, -0.671184, -0.741291, 48.4071, 6.76432)
 auto_calculate_length_and_angle = false
 length = 103.368
 bone_angle = 3.16446
 
 [node name="LegF2P3" type="Bone2D" parent="Skeleton2D/Torso/LegF2P2/LegF2P2"]
-position = Vector2(103.211, 5.70615)
+position = Vector2(95.5061, 3.46507)
 rotation = -0.465255
 rest = Transform2D(0.874026, -0.485879, 0.485879, 0.874026, 103.211, 5.70615)
 auto_calculate_length_and_angle = false
@@ -397,6 +540,7 @@ bone_angle = 0.0
 [node name="ArmBP2" type="Bone2D" parent="Skeleton2D/Torso/ArmBP1"]
 position = Vector2(71.2556, -10.3749)
 rotation = -2.15586
+scale = Vector2(1, 1)
 rest = Transform2D(-0.552253, -0.833677, 0.833677, -0.552253, 71.2556, -10.3749)
 auto_calculate_length_and_angle = false
 length = 16.0
@@ -414,6 +558,7 @@ bone_angle = 0.0
 visible = false
 position = Vector2(242.248, -22.4008)
 rotation = 2.26591
+scale = Vector2(1, 1)
 rest = Transform2D(-0.640476, 0.767978, -0.767978, -0.640476, 242.248, -22.4008)
 auto_calculate_length_and_angle = false
 length = 78.0257
@@ -422,6 +567,7 @@ bone_angle = -2.57851
 [node name="ArmFP2" type="Bone2D" parent="Skeleton2D/Torso/ArmFP2"]
 position = Vector2(77.9466, -3.51025)
 rotation = -2.15586
+scale = Vector2(1, 1)
 rest = Transform2D(-0.552253, -0.833677, 0.833677, -0.552253, 77.9466, -3.51025)
 auto_calculate_length_and_angle = false
 length = 64.6607
