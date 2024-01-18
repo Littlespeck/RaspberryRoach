@@ -2,26 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<<< HEAD:Resources/Artwork/Roach Texture.png.import
-uid="uid://cjgvfpu60irj0"
-path="res://.godot/imported/Roach Texture.png-bec18f6cd5b700a2986a99307bf5a945.ctex"
-========
-uid="uid://bhdg70ijeolte"
-path="res://.godot/imported/Carrot.PNG-82352b78c13757e0d6899a3128d42c5b.ctex"
->>>>>>>> Feldi:Resources/Artwork/Carrot.PNG.import
+uid="uid://cq5322nob3111"
+path="res://.godot/imported/Carrot.PNG-a3a7200f1cfab8c936f7f7a4676cbeb0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-<<<<<<<< HEAD:Resources/Artwork/Roach Texture.png.import
-source_file="res://Resources/Artwork/Roach Texture.png"
-dest_files=["res://.godot/imported/Roach Texture.png-bec18f6cd5b700a2986a99307bf5a945.ctex"]
-========
-source_file="res://Rescources/Artwork/Icons/Upgrades/Carrot.PNG"
-dest_files=["res://.godot/imported/Carrot.PNG-82352b78c13757e0d6899a3128d42c5b.ctex"]
->>>>>>>> Feldi:Resources/Artwork/Carrot.PNG.import
+source_file="res://Resources/Artwork/Carrot.PNG"
+dest_files=["res://.godot/imported/Carrot.PNG-a3a7200f1cfab8c936f7f7a4676cbeb0.ctex"]
 
 [params]
 

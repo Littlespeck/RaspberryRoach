@@ -2,26 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<<< HEAD:Resources/Artwork/Roach reference.png.import
-uid="uid://c54i30o3vt3nu"
+uid="uid://bq7i3ldmghamb"
 path="res://.godot/imported/Roach reference.png-5c45ce9ae2a1a27c90c3bef2b59c73c8.ctex"
-========
-uid="uid://c8envbx6tqmuu"
-path="res://.godot/imported/Berry.PNG-a7d4e312c84d24b484d2a92a99257f0f.ctex"
->>>>>>>> Feldi:Resources/Artwork/Berry.PNG.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-<<<<<<<< HEAD:Resources/Artwork/Roach reference.png.import
 source_file="res://Resources/Artwork/Roach reference.png"
 dest_files=["res://.godot/imported/Roach reference.png-5c45ce9ae2a1a27c90c3bef2b59c73c8.ctex"]
-========
-source_file="res://Rescources/Artwork/Icons/Upgrades/Berry.PNG"
-dest_files=["res://.godot/imported/Berry.PNG-a7d4e312c84d24b484d2a92a99257f0f.ctex"]
->>>>>>>> Feldi:Resources/Artwork/Berry.PNG.import
 
 [params]
 
