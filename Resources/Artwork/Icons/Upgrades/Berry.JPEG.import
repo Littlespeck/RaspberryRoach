@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dose65bu46b1l"
-path="res://.godot/imported/Berry.JPEG-44be6359f7d237d2b57c825753717def.ctex"
+uid="uid://cn0tk2a45022b"
+path="res://.godot/imported/Berry.JPEG-0165c67273dee3ddf54353b07b1f4e77.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Resources/Artwork/Icons/Upgrades/Berry.JPEG"
-dest_files=["res://.godot/imported/Berry.JPEG-44be6359f7d237d2b57c825753717def.ctex"]
+source_file="res://Rescources/Artwork/Icons/Upgrades/Berry.JPEG"
+dest_files=["res://.godot/imported/Berry.JPEG-0165c67273dee3ddf54353b07b1f4e77.ctex"]
 
 [params]
 

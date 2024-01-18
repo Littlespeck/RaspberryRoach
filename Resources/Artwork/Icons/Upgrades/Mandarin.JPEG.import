@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b8yjr1rlouhal"
-path="res://.godot/imported/Mandarin.JPEG-f9f6e05db2f3fd656f3ff293b54a880e.ctex"
+uid="uid://ba2kd6xi2ilhw"
+path="res://.godot/imported/Mandarin.JPEG-fdca9ef5d8d42f059ed651b4648a0913.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Resources/Artwork/Icons/Upgrades/Mandarin.JPEG"
-dest_files=["res://.godot/imported/Mandarin.JPEG-f9f6e05db2f3fd656f3ff293b54a880e.ctex"]
+source_file="res://Rescources/Artwork/Icons/Upgrades/Mandarin.JPEG"
+dest_files=["res://.godot/imported/Mandarin.JPEG-fdca9ef5d8d42f059ed651b4648a0913.ctex"]
 
 [params]
 

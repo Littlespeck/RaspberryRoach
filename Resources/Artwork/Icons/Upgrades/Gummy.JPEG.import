@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bg5l4m2l4chgl"
-path="res://.godot/imported/Gummy.JPEG-919cc30b453aa4cce93260c9c8d02bae.ctex"
+uid="uid://dhl51l7d6vqta"
+path="res://.godot/imported/Gummy.JPEG-f9216dde0853edc7f71869b0d74e6c55.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Resources/Artwork/Icons/Upgrades/Gummy.JPEG"
-dest_files=["res://.godot/imported/Gummy.JPEG-919cc30b453aa4cce93260c9c8d02bae.ctex"]
+source_file="res://Rescources/Artwork/Icons/Upgrades/Gummy.JPEG"
+dest_files=["res://.godot/imported/Gummy.JPEG-f9216dde0853edc7f71869b0d74e6c55.ctex"]
 
 [params]
 

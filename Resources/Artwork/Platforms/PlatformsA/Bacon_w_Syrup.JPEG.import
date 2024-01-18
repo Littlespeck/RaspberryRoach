@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://drrrkrhvrsc06"
-path="res://.godot/imported/Bacon_w_Syrup.JPEG-7cd6226d5e0b3e6187e66e98c3dbd212.ctex"
+uid="uid://cfajunmp4mlcc"
+path="res://.godot/imported/Bacon_w_Syrup.JPEG-bf7af57f2d79d75034d3f4d794be6e68.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Resources/Artwork/Platforms/PlatformsA/Bacon_w_Syrup.JPEG"
-dest_files=["res://.godot/imported/Bacon_w_Syrup.JPEG-7cd6226d5e0b3e6187e66e98c3dbd212.ctex"]
+source_file="res://Rescources/Artwork/Platforms/PlatformsA/Bacon_w_Syrup.JPEG"
+dest_files=["res://.godot/imported/Bacon_w_Syrup.JPEG-bf7af57f2d79d75034d3f4d794be6e68.ctex"]
 
 [params]
 

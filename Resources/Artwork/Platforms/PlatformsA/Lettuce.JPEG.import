@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://k2oas0pfipsi"
-path="res://.godot/imported/Lettuce.JPEG-a9aeb5beddf6a90f9ab4b8135107f5b9.ctex"
+uid="uid://bwx84y1d14lpp"
+path="res://.godot/imported/Lettuce.JPEG-fde7553c93aadedbedfe084013900736.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Resources/Artwork/Platforms/PlatformsA/Lettuce.JPEG"
-dest_files=["res://.godot/imported/Lettuce.JPEG-a9aeb5beddf6a90f9ab4b8135107f5b9.ctex"]
+source_file="res://Rescources/Artwork/Platforms/PlatformsA/Lettuce.JPEG"
+dest_files=["res://.godot/imported/Lettuce.JPEG-fde7553c93aadedbedfe084013900736.ctex"]
 
 [params]
 
