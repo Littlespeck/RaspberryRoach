@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://du8be4q533fgl"
-path="res://.godot/imported/Gurkin.JPEG-826a8cc92e7930bb1ca6bc5539c2756c.ctex"
+path="res://.godot/imported/Gurkin.JPEG-a8ed20e640da0987fa955c6b4af54c14.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Rescources/Artwork/Platforms/PlatformsA/Gurkin.JPEG"
-dest_files=["res://.godot/imported/Gurkin.JPEG-826a8cc92e7930bb1ca6bc5539c2756c.ctex"]
+source_file="res://Resources/Artwork/Platforms/PlatformsA/Gurkin.JPEG"
+dest_files=["res://.godot/imported/Gurkin.JPEG-a8ed20e640da0987fa955c6b4af54c14.ctex"]
 
 [params]
 
