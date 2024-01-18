@@ -15,6 +15,10 @@ run/main_scene="res://Resources/Scenes/scene_handler.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Globals="*res://Resources/Scripts/Globals.gd"
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"
