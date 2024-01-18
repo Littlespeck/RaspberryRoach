@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cfajunmp4mlcc"
-path="res://.godot/imported/Bacon_w_Syrup.JPEG-bf7af57f2d79d75034d3f4d794be6e68.ctex"
+uid="uid://gh673ipnjr1k"
+path="res://.godot/imported/Brokkoli.PNG-22a24dc74081561f14a3d24ca713153c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Rescources/Artwork/Platforms/PlatformsA/Bacon_w_Syrup.JPEG"
-dest_files=["res://.godot/imported/Bacon_w_Syrup.JPEG-bf7af57f2d79d75034d3f4d794be6e68.ctex"]
+source_file="res://Rescources/Artwork/Icons/Upgrades/Brokkoli.PNG"
+dest_files=["res://.godot/imported/Brokkoli.PNG-22a24dc74081561f14a3d24ca713153c.ctex"]
 
 [params]
 

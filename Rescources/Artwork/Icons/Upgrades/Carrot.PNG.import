@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cmi15wle8is4x"
-path="res://.godot/imported/Mushroom.JPEG-b7ea21f7dfddbfca4be21f0e744cf718.ctex"
+uid="uid://bhdg70ijeolte"
+path="res://.godot/imported/Carrot.PNG-82352b78c13757e0d6899a3128d42c5b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Rescources/Artwork/Icons/Upgrades/Mushroom.JPEG"
-dest_files=["res://.godot/imported/Mushroom.JPEG-b7ea21f7dfddbfca4be21f0e744cf718.ctex"]
+source_file="res://Rescources/Artwork/Icons/Upgrades/Carrot.PNG"
+dest_files=["res://.godot/imported/Carrot.PNG-82352b78c13757e0d6899a3128d42c5b.ctex"]
 
 [params]
 

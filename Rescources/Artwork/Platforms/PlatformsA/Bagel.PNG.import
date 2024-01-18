@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c1226tgrwov5q"
-path="res://.godot/imported/Bagel.JPEG-2164477b7f3ed3db98430fec4b0f1891.ctex"
+uid="uid://dy4ne1oy1baj5"
+path="res://.godot/imported/Bagel.PNG-d6a97d90308584f926a2442a00698d12.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Rescources/Artwork/Platforms/PlatformsA/Bagel.JPEG"
-dest_files=["res://.godot/imported/Bagel.JPEG-2164477b7f3ed3db98430fec4b0f1891.ctex"]
+source_file="res://Rescources/Artwork/Platforms/PlatformsA/Bagel.PNG"
+dest_files=["res://.godot/imported/Bagel.PNG-d6a97d90308584f926a2442a00698d12.ctex"]
 
 [params]
 

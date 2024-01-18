@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cn0tk2a45022b"
-path="res://.godot/imported/Berry.JPEG-0165c67273dee3ddf54353b07b1f4e77.ctex"
+uid="uid://bxng1e8a3jv8v"
+path="res://.godot/imported/Candy.PNG-d739d5ba676620190ce6472ad8da64fd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Rescources/Artwork/Icons/Upgrades/Berry.JPEG"
-dest_files=["res://.godot/imported/Berry.JPEG-0165c67273dee3ddf54353b07b1f4e77.ctex"]
+source_file="res://Rescources/Artwork/Icons/Upgrades/Candy.PNG"
+dest_files=["res://.godot/imported/Candy.PNG-d739d5ba676620190ce6472ad8da64fd.ctex"]
 
 [params]
 

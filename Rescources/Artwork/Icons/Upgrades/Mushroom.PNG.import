@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ba2kd6xi2ilhw"
-path="res://.godot/imported/Mandarin.JPEG-fdca9ef5d8d42f059ed651b4648a0913.ctex"
+uid="uid://pn4g282k4i0e"
+path="res://.godot/imported/Mushroom.PNG-0bddebb8e102bade5541c4bdc358db76.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Rescources/Artwork/Icons/Upgrades/Mandarin.JPEG"
-dest_files=["res://.godot/imported/Mandarin.JPEG-fdca9ef5d8d42f059ed651b4648a0913.ctex"]
+source_file="res://Rescources/Artwork/Icons/Upgrades/Mushroom.PNG"
+dest_files=["res://.godot/imported/Mushroom.PNG-0bddebb8e102bade5541c4bdc358db76.ctex"]
 
 [params]
 

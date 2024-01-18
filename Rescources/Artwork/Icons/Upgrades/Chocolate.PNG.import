@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://du8be4q533fgl"
-path="res://.godot/imported/Gurkin.JPEG-826a8cc92e7930bb1ca6bc5539c2756c.ctex"
+uid="uid://dq4ktefm1l35r"
+path="res://.godot/imported/Chocolate.PNG-ae72d7926d01f40ee332ada076573838.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Rescources/Artwork/Platforms/PlatformsA/Gurkin.JPEG"
-dest_files=["res://.godot/imported/Gurkin.JPEG-826a8cc92e7930bb1ca6bc5539c2756c.ctex"]
+source_file="res://Rescources/Artwork/Icons/Upgrades/Chocolate.PNG"
+dest_files=["res://.godot/imported/Chocolate.PNG-ae72d7926d01f40ee332ada076573838.ctex"]
 
 [params]
 
