@@ -37,6 +37,17 @@ func _physics_process(delta):
 		velocity.x = direction * SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
+	if velocity.x == 0 and !jumping:
+		get_node("AnimationPlayer").play("idle")
+	
+	if velocity.x != 0 and !jumping:
+		get_node("AnimationPlayer").play("walk")
+	
+	if jumping:
+		get_node("AnimationPlayer").play("jump")
+	
+	if velocity.y == 0:
+		jumping = false
 
 	move_and_slide()
 	last_floor = is_on_floor()
