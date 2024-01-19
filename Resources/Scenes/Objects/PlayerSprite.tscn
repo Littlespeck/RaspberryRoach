@@ -2231,6 +2231,7 @@ bone_angle = 0.0
 [node name="LegB1P1" type="Bone2D" parent="Skeleton2D/Torso"]
 position = Vector2(35.8974, 22.3691)
 rotation = 0.240843
+scale = Vector2(1, 1)
 rest = Transform2D(0.960652, 0.277755, -0.277755, 0.960652, 35.8974, 22.3691)
 auto_calculate_length_and_angle = false
 length = 16.0
