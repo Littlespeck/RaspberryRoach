@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://bvbg373xqt22m"]
+
+[ext_resource type="PackedScene" uid="uid://bqbjgum2mi0x5" path="res://Resources/Scenes/Objects/PlayerScriptNode.tscn" id="1_j7tku"]
+[ext_resource type="PackedScene" uid="uid://dh3p2jqjj1r5b" path="res://Resources/Scenes/Objects/PlayerSprite.tscn" id="2_8ujap"]
+
+[node name="Player" type="Node2D"]
+position = Vector2(546, 580)
+
+[node name="PlayerScriptNode" parent="." instance=ExtResource("1_j7tku")]
+
+[node name="Roach PC" parent="PlayerScriptNode" instance=ExtResource("2_8ujap")]
+
+[node name="PlayerCollisonBox" type="CollisionPolygon2D" parent="PlayerScriptNode"]
+polygon = PackedVector2Array(73, -411, 46, -395, 16, -368, -6, -342, -22, -292, -46, -272, -80, -243, -115, -223, -146, -194, -172, -158, -152, -141, -148, -121, -114, -108, -49, -125, 2, -177, 3, -207, 44, -238, 60, -274, 47, -317, 59, -327, 76, -310, 95, -325, 93, -364, 90, -397)

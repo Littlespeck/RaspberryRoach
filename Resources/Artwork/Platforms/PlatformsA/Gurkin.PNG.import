@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bq7i3ldmghamb"
-path="res://.godot/imported/Roach reference.png-5c45ce9ae2a1a27c90c3bef2b59c73c8.ctex"
+uid="uid://cdsfm81xhnr0j"
+path="res://.godot/imported/Gurkin.PNG-0b8580fff1c6042848b5b07783a7a287.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Resources/Artwork/Roach reference.png"
-dest_files=["res://.godot/imported/Roach reference.png-5c45ce9ae2a1a27c90c3bef2b59c73c8.ctex"]
+source_file="res://Rescources/Artwork/Platforms/PlatformsA/Gurkin.PNG"
+dest_files=["res://.godot/imported/Gurkin.PNG-0b8580fff1c6042848b5b07783a7a287.ctex"]
 
 [params]
 
