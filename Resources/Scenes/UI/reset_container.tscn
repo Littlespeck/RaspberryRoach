@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://bitluopo734ft"]
+
+[node name="reset_control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 364.0
+offset_bottom = 271.0
+
+[node name="reset_container" type="PanelContainer" parent="."]
+offset_right = 364.0
+offset_bottom = 271.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="reset_container"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="reset_container/VBoxContainer"]
+custom_minimum_size = Vector2(0, 17.405)
+layout_mode = 2
+
+[node name="reset_label1" type="Label" parent="reset_container/VBoxContainer"]
+layout_mode = 2
+text = "Resolution settings will revert in"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="countdown" type="Label" parent="reset_container/VBoxContainer"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "15"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="reset_label2" type="Label" parent="reset_container/VBoxContainer"]
+layout_mode = 2
+text = "Keep changes?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer3" type="MarginContainer" parent="reset_container/VBoxContainer"]
+custom_minimum_size = Vector2(0, 17.405)
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="reset_container/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_stretch_ratio = 0.0
+
+[node name="Button" type="Button" parent="reset_container/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(100, 50)
+layout_mode = 2
+text = "Yes"
+
+[node name="MarginContainer" type="MarginContainer" parent="reset_container/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+
+[node name="Button2" type="Button" parent="reset_container/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(100, 50)
+layout_mode = 2
+text = "No
+"
+
+[node name="MarginContainer2" type="MarginContainer" parent="reset_container/VBoxContainer"]
+custom_minimum_size = Vector2(0, 17.405)
+layout_mode = 2

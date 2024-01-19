@@ -1,0 +1,59 @@
+[gd_scene load_steps=3 format=3 uid="uid://d2a6qtqq5nxm2"]
+
+[ext_resource type="Script" path="res://Resources/Scripts/main_menu_base.gd" id="1_3wa3v"]
+[ext_resource type="Texture2D" uid="uid://bkdcmb5hcui7d" path="res://Resources/Placeholder/CCE_Logo_Placeholder.png" id="1_m3c7e"]
+
+[node name="main_menu_base" type="Control"]
+layout_mode = 3
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -576.0
+offset_right = 576.0
+offset_bottom = 648.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3wa3v")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 252.0
+offset_right = 900.0
+offset_bottom = 648.0
+color = Color(0, 0, 0, 0.0823529)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 2
+anchor_left = 0.502
+anchor_right = 0.502
+offset_left = -302.304
+offset_top = 43.0
+offset_right = 301.696
+offset_bottom = 293.0
+texture = ExtResource("1_m3c7e")
+
+[node name="options_container" type="VBoxContainer" parent="."]
+layout_mode = 2
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -300.0
+offset_top = 366.0
+offset_right = 304.0
+offset_bottom = 532.0
+
+[node name="start_game_button" type="Button" parent="options_container"]
+layout_mode = 2
+text = "Start Game"
+
+[node name="options_menu_button" type="Button" parent="options_container"]
+layout_mode = 2
+text = "Options"
+
+[node name="quit_game_button" type="Button" parent="options_container"]
+layout_mode = 2
+text = "Quit
+"
+
+[connection signal="button_down" from="options_container/start_game_button" to="." method="_on_start_game_button_button_down"]
+[connection signal="button_down" from="options_container/options_menu_button" to="." method="_on_options_menu_button_button_down"]
+[connection signal="button_down" from="options_container/quit_game_button" to="." method="_on_quit_game_button_button_down"]
