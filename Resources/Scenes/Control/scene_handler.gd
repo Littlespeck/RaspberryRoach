@@ -6,7 +6,7 @@ var main_menu = preload("res://Resources/Scenes/UI/main_menu_base.tscn").instant
 var options_menu = preload("res://Resources/Scenes/UI/options_base.tscn").instantiate()
 
 func _ready():
-	load_options_menu()
+	#load_options_menu()
 	load_main_menu()
 	
 
