@@ -2,11 +2,12 @@ extends CharacterBody2D
 
 
 const SPEED = 300.0
-const JUMP_VELOCITY = -400.0
+const JUMP_VELOCITY = -1000.0
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var jumping = false
+var face_right = true
 
 #Coyote Time Variables
 #player walks off the edge of a platform we still allow them to jump as if they were still on the ground for a few frames
@@ -37,6 +38,14 @@ func _physics_process(delta):
 		velocity.x = direction * SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
+	
+	move_and_slide()
+	last_floor = is_on_floor()
+	
+	##
+	##Animations
+	##
+	
 	if velocity.x == 0 and !jumping:
 		get_node("AnimationPlayer").play("idle")
 	
@@ -48,9 +57,16 @@ func _physics_process(delta):
 	
 	if velocity.y == 0:
 		jumping = false
+	
+	if velocity.x > 0 and face_right == false:
+		scale.x = -1
+		face_right = true
+	
+	if velocity.x < 0 and face_right == true:
+		scale.x = -1
+		face_right = false
 
-	move_and_slide()
-	last_floor = is_on_floor()
+
 
 func _on_coyote_timer_timeout():
 	coyote = false
