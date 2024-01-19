@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://dh3p2jqjj1r5b"]
 
-[ext_resource type="Texture2D" uid="uid://cv5et7vxnvrlr" path="res://Resources/Artwork/Roach Texture.png" id="2_w40q1"]
+[ext_resource type="Texture2D" uid="uid://cjgvfpu60irj0" path="res://Resources/Artwork/Roach Texture.png" id="2_w40q1"]
 
 [sub_resource type="Animation" id="Animation_ws0om"]
 length = 0.001
