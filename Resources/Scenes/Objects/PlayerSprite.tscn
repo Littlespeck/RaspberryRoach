@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://dh3p2jqjj1r5b"]
 
-[ext_resource type="Texture2D" uid="uid://cjgvfpu60irj0" path="res://Rescources/Artwork/Roach Texture.png" id="2_w40q1"]
+[ext_resource type="Texture2D" uid="uid://cv5et7vxnvrlr" path="res://Resources/Artwork/Roach Texture.png" id="2_w40q1"]
 
 [sub_resource type="Animation" id="Animation_ws0om"]
 length = 0.001
@@ -2373,7 +2373,6 @@ length = 80.514
 bone_angle = 6.486
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-visible = false
 polygon = PackedVector2Array(73, -411, 46, -395, 16, -368, -6, -342, -22, -292, -46, -272, -80, -243, -115, -223, -146, -194, -172, -158, -152, -141, -148, -121, -114, -108, -49, -125, 2, -177, 3, -207, 44, -238, 60, -274, 47, -317, 59, -327, 76, -310, 95, -325, 93, -364, 90, -397)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

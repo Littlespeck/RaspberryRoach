@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://piq5b0lx27wv"]
+
+[ext_resource type="Texture2D" uid="uid://dxogvbofautew" path="res://Resources/Artwork/Platforms/PlatformsA/Bacon_w_Syrup.PNG" id="1_70btr"]
+
+[node name="BaconPlatform" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_70btr")
