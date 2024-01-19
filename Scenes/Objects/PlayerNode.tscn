@@ -1,14 +1,46 @@
-[gd_scene load_steps=3 format=3 uid="uid://bvbg373xqt22m"]
+[gd_scene load_steps=5 format=3 uid="uid://bvbg373xqt22m"]
 
 [ext_resource type="PackedScene" uid="uid://bqbjgum2mi0x5" path="res://Scenes/Objects/PlayerScriptNode.tscn" id="1_j7tku"]
 [ext_resource type="PackedScene" uid="uid://dh3p2jqjj1r5b" path="res://Scenes/Objects/PlayerSprite.tscn" id="2_8ujap"]
 
-[node name="Player" type="Node2D"]
-position = Vector2(546, 580)
+[sub_resource type="GDScript" id="GDScript_oymxq"]
+script/source = "extends Area2D
 
-[node name="PlayerScriptNode" parent="." instance=ExtResource("1_j7tku")]
+signal PlatformErased
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p368e"]
+size = Vector2(4892, 636)
+
+[node name="Player" type="Node2D" groups=["Player"]]
+
+[node name="PlayerScriptNode" parent="." groups=["Player"] instance=ExtResource("1_j7tku")]
+scale = Vector2(0.25, 0.25)
+
+[node name="PlayerCollisonBox" type="CollisionPolygon2D" parent="PlayerScriptNode"]
+polygon = PackedVector2Array(73, -411, 46, -395, 16, -368, -6, -342, -22, -292, -46, -272, -80, -243, -115, -223, -146, -194, -172, -158, -152, -141, -148, -121, -114, -108, -115, -61, -70, -17, -44, -6, -11, -4, 33, -9, 33, -30, 11, -63, 9, -103, 23, -161, 30, -184, 15, -188, 3, -207, 44, -238, 60, -274, 47, -317, 59, -327, 76, -310, 95, -325, 93, -364, 90, -397)
 
 [node name="Roach PC" parent="PlayerScriptNode" instance=ExtResource("2_8ujap")]
 
-[node name="PlayerCollisonBox" type="CollisionPolygon2D" parent="PlayerScriptNode"]
-polygon = PackedVector2Array(73, -411, 46, -395, 16, -368, -6, -342, -22, -292, -46, -272, -80, -243, -115, -223, -146, -194, -172, -158, -152, -141, -148, -121, -114, -108, -49, -125, 2, -177, 3, -207, 44, -238, 60, -274, 47, -317, 59, -327, 76, -310, 95, -325, 93, -364, 90, -397)
+[node name="PlayerCamera" type="Camera2D" parent="PlayerScriptNode"]
+position = Vector2(0, -240)
+
+[node name="PlatformKillZone" type="Area2D" parent="PlayerScriptNode"]
+position = Vector2(-204, 400)
+script = SubResource("GDScript_oymxq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerScriptNode/PlatformKillZone"]
+position = Vector2(150, 1006)
+shape = SubResource("RectangleShape2D_p368e")
+
+[connection signal="body_entered" from="PlayerScriptNode/PlatformKillZone" to="PlayerScriptNode" method="_on_platform_kill_zone_body_entered"]

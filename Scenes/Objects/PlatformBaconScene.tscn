@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://d24555hvfebd7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vq6um"]
+size = Vector2(303, 29)
+
+[node name="StaticBody2D" type="StaticBody2D" groups=["Platform"]]
+
+[node name="PlatformBaconScene" type="ColorRect" parent="." groups=["Platform"]]
+offset_left = -1.0
+offset_right = 302.0
+offset_bottom = 29.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(151.5, 14.5)
+shape = SubResource("RectangleShape2D_vq6um")

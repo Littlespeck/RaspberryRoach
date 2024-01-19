@@ -30,6 +30,7 @@ bones = ["Torso", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 internal_vertex_count = 6
 
 [node name="LegB1P3" type="Polygon2D" parent="polygons/LegB1P2"]
+visible = false
 position = Vector2(-92.6229, 16.4155)
 rotation = 0.582782
 offset = Vector2(-684.371, -622.058)

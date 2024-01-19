@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://c0coitotxgen3"]
+
+[ext_resource type="Script" path="res://Resources/Scripts/PlatformGeneration.gd" id="1_du10d"]
+[ext_resource type="PackedScene" uid="uid://bvbg373xqt22m" path="res://Scenes/Objects/PlayerNode.tscn" id="1_ie7np"]
+
+[node name="PlatformGeneration" type="Node2D"]
+script = ExtResource("1_du10d")
+
+[node name="Player" parent="." instance=ExtResource("1_ie7np")]
+
+[node name="PlatformContainer" type="Node2D" parent="."]
+
+[node name="SpawnLocations" type="Node2D" parent="."]
+position = Vector2(-578, -434)
+
+[node name="SpawnLocation1" type="Node2D" parent="SpawnLocations"]
+position = Vector2(206, 0)
+
+[node name="SpawnLocation2" type="Node2D" parent="SpawnLocations"]
+position = Vector2(576, 8)
+
+[node name="SpawnLocation3" type="Node2D" parent="SpawnLocations"]
+position = Vector2(937, 0)
