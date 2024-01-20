@@ -19,7 +19,7 @@ func _ready():
 	add_child(player_character)
 	get_node("Camera2D").position.y = camera_altitude
 
-func _process(delta):
+func _process(_delta):
 	if get_node("Player/Roach PC").position.y + camera_offset < camera_altitude:
 		camera_altitude = get_node("Player/Roach PC").position.y + camera_offset
 		get_node("Camera2D").position.y = camera_altitude
