@@ -39,4 +39,15 @@ func _physics_process(_delta):
 		spawn_platform()
 
 func spawn_platform():
-	pass
+	var platform = platform_scene.instantiate()
+	
+	var platform_spawn_location = get_node("PlatformPath/PlatformSpawnLocation")
+	platform_spawn_location.progress_ratio = randf()
+	
+	platform.position = platform_spawn_location.position
+	platform.position.y = get_node("PlatformPath").position.y
+	platform.scale.x = .5
+	
+	add_child(platform)
+	get_node("PlatformPath").position.y -= platform_spread
+	platform_spread += 5
