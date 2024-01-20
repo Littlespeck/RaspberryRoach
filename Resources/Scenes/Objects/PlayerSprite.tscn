@@ -1,5 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://dh3p2jqjj1r5b"]
+[gd_scene load_steps=8 format=3 uid="uid://dh3p2jqjj1r5b"]
 
+[ext_resource type="Script" path="res://Resources/Scripts/PlayerSprite.gd" id="1_em2f5"]
 [ext_resource type="Texture2D" uid="uid://cv5et7vxnvrlr" path="res://Resources/Artwork/Roach Texture.png" id="2_w40q1"]
 
 [sub_resource type="Animation" id="Animation_ws0om"]
@@ -972,7 +973,6 @@ tracks/39/keys = {
 [sub_resource type="Animation" id="Animation_5a7uc"]
 resource_name = "jump"
 length = 2.5
-loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -1949,6 +1949,7 @@ _data = {
 
 [node name="Roach PC" type="CharacterBody2D"]
 position = Vector2(9, 4)
+script = ExtResource("1_em2f5")
 
 [node name="polygons" type="Node2D" parent="."]
 
@@ -2210,6 +2211,7 @@ bones = ["Torso", PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
 internal_vertex_count = 11
 
 [node name="Skeleton2D" type="Skeleton2D" parent="."]
+visible = false
 
 [node name="Torso" type="Bone2D" parent="Skeleton2D"]
 position = Vector2(-129, -128)
@@ -2231,7 +2233,7 @@ bone_angle = 0.0
 [node name="LegB1P1" type="Bone2D" parent="Skeleton2D/Torso"]
 position = Vector2(35.8974, 22.3691)
 rotation = 0.240843
-scale = Vector2(1, 1)
+scale = Vector2(0.999999, 0.999999)
 rest = Transform2D(0.960652, 0.277755, -0.277755, 0.960652, 35.8974, 22.3691)
 auto_calculate_length_and_angle = false
 length = 16.0
@@ -2240,6 +2242,7 @@ bone_angle = 0.0
 [node name="LegB1P2" type="Bone2D" parent="Skeleton2D/Torso/LegB1P1"]
 position = Vector2(75.0817, 9.578)
 rotation = 2.62678
+scale = Vector2(1, 1)
 rest = Transform2D(-0.836587, 0.547834, -0.547834, -0.836587, 75.0817, 9.578)
 auto_calculate_length_and_angle = false
 length = 115.312
@@ -2248,6 +2251,7 @@ bone_angle = 9.05291
 [node name="LegB1P3" type="Bone2D" parent="Skeleton2D/Torso/LegB1P1/LegB1P2"]
 position = Vector2(113.876, 18.144)
 rotation = -1.22609
+scale = Vector2(0.999999, 0.999999)
 rest = Transform2D(0.2282, -0.973614, 0.973614, 0.2282, 113.876, 18.144)
 auto_calculate_length_and_angle = false
 length = 89.73
@@ -2256,6 +2260,7 @@ bone_angle = -12.973
 [node name="LegF1P2" type="Bone2D" parent="Skeleton2D/Torso"]
 position = Vector2(18.1002, 15.7918)
 rotation = 0.331855
+scale = Vector2(1, 1)
 rest = Transform2D(0.960652, 0.277755, -0.277755, 0.960652, 18.1002, 15.7918)
 auto_calculate_length_and_angle = false
 length = 70.9366
@@ -2264,6 +2269,7 @@ bone_angle = 1.08989
 [node name="LegF1P2" type="Bone2D" parent="Skeleton2D/Torso/LegF1P2"]
 position = Vector2(70.9238, 1.3493)
 rotation = 2.56182
+scale = Vector2(1, 1)
 rest = Transform2D(-0.836587, 0.547834, -0.547834, -0.836587, 70.9238, 1.3493)
 
 [node name="LegF1P3" type="Bone2D" parent="Skeleton2D/Torso/LegF1P2/LegF1P2"]
@@ -2278,6 +2284,7 @@ bone_angle = -6.487
 [node name="LegB2P1" type="Bone2D" parent="Skeleton2D/Torso"]
 position = Vector2(113.502, 35.8783)
 rotation = -0.0134356
+scale = Vector2(1, 1)
 rest = Transform2D(0.99991, -0.0134352, 0.0134352, 0.99991, 113.502, 35.8783)
 auto_calculate_length_and_angle = false
 length = 16.0
@@ -2286,11 +2293,13 @@ bone_angle = 0.0
 [node name="LegB2P2" type="Bone2D" parent="Skeleton2D/Torso/LegB2P1"]
 position = Vector2(46.7683, 6.14225)
 rotation = 2.40579
+scale = Vector2(1, 1)
 rest = Transform2D(-0.741291, 0.671184, -0.671184, -0.741291, 46.7683, 6.14225)
 
 [node name="LegB2P3" type="Bone2D" parent="Skeleton2D/Torso/LegB2P1/LegB2P2"]
 position = Vector2(100.011, 6.53877)
 rotation = -0.507369
+scale = Vector2(1, 1)
 rest = Transform2D(0.874026, -0.485879, 0.485879, 0.874026, 100.011, 6.53877)
 auto_calculate_length_and_angle = false
 length = 80.514
@@ -2299,6 +2308,7 @@ bone_angle = -6.486
 [node name="LegF2P2" type="Bone2D" parent="Skeleton2D/Torso"]
 position = Vector2(116.933, 41.1917)
 rotation = 0.131839
+scale = Vector2(1, 1)
 rest = Transform2D(1, 0, 0, 1, 116.933, 41.1917)
 auto_calculate_length_and_angle = false
 length = 48.8774
@@ -2324,6 +2334,7 @@ bone_angle = -6.486
 [node name="ArmBP1" type="Bone2D" parent="Skeleton2D/Torso"]
 position = Vector2(244.118, -18.3384)
 rotation = 2.37724
+scale = Vector2(1, 1)
 rest = Transform2D(-0.721833, 0.692067, -0.692067, -0.721833, 244.118, -18.3384)
 auto_calculate_length_and_angle = false
 length = 16.0
@@ -2341,6 +2352,7 @@ bone_angle = 0.0
 [node name="ArmBP3" type="Bone2D" parent="Skeleton2D/Torso/ArmBP1/ArmBP2"]
 position = Vector2(55.837, -7.22672)
 rotation = 2.26425
+scale = Vector2(1, 1)
 rest = Transform2D(-0.639194, 0.769045, -0.769045, -0.639194, 55.837, -7.22672)
 auto_calculate_length_and_angle = false
 length = 71.298
@@ -2367,15 +2379,18 @@ bone_angle = 0.688415
 [node name="ArmFP3" type="Bone2D" parent="Skeleton2D/Torso/ArmFP2/ArmFP2"]
 position = Vector2(64.656, 0.776886)
 rotation = 2.26425
+scale = Vector2(1, 1)
 rest = Transform2D(-0.639194, 0.769045, -0.769045, -0.639194, 64.656, 0.776886)
 auto_calculate_length_and_angle = false
 length = 80.514
 bone_angle = 6.486
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PackedVector2Array(73, -411, 46, -395, 16, -368, -6, -342, -22, -292, -46, -272, -80, -243, -115, -223, -146, -194, -172, -158, -152, -141, -148, -121, -114, -108, -49, -125, 2, -177, 3, -207, 44, -238, 60, -274, 47, -317, 59, -327, 76, -310, 95, -325, 93, -364, 90, -397)
+polygon = PackedVector2Array(-118, -56, -57, -6, 47, -6)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_qt8bo")
 }
+
+[node name="CoyoteTimer" type="Timer" parent="."]
