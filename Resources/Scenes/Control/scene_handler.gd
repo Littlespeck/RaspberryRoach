@@ -9,8 +9,8 @@ func on_new_game_pressed():
 	add_child(game_scene)
 	game_scene.connect("game_finished", unload_game)
 
-func unload_game():
-	pass
+func unload_game(score):
+	get_node("GameScene").queue_free()
 
 func load_main_menu():
 	get_node("MainMenu/M/NewGame").connect("pressed", on_new_game_pressed)

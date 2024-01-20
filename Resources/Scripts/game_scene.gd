@@ -23,3 +23,7 @@ func _process(delta):
 	if get_node("Player/Roach PC").position.y + camera_offset < camera_altitude:
 		camera_altitude = get_node("Player/Roach PC").position.y + camera_offset
 		get_node("Camera2D").position.y = camera_altitude
+
+	if get_node("Player/Roach PC").position.y > get_node("Camera2D").position.y + screen_size:
+		var score = -camera_altitude
+		emit_signal("game_finished", score)
