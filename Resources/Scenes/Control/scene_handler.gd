@@ -11,6 +11,9 @@ func on_new_game_pressed():
 
 func unload_game(score):
 	get_node("GameScene").queue_free()
+	var main_menu = load("res://Resources/Scenes/Control/MainMenu.tscn").instantiate()
+	add_child(main_menu)
+	load_main_menu()
 
 func load_main_menu():
 	get_node("MainMenu/M/NewGame").connect("pressed", on_new_game_pressed)
