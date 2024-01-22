@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bco7mwloko54p"
-path="res://.godot/imported/MandarinB.png-26eef478e56f84915d76d779bca570b0.ctex"
+path="res://.godot/imported/MandarinB.png-ec5b9267dcec51305ab230502ca919f9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Rescources/Artwork/Icons/Upgrades/MandarinB.png"
-dest_files=["res://.godot/imported/MandarinB.png-26eef478e56f84915d76d779bca570b0.ctex"]
+source_file="res://Resources/Artwork/MandarinB.png"
+dest_files=["res://.godot/imported/MandarinB.png-ec5b9267dcec51305ab230502ca919f9.ctex"]
 
 [params]
 
