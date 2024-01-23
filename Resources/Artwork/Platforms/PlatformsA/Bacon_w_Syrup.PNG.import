@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dxogvbofautew"
-path="res://.godot/imported/Bacon_w_Syrup.PNG-24f7627f2a4f194b5538eca32d37a58f.ctex"
+path="res://.godot/imported/Bacon_w_Syrup.PNG-620b3895d3c2dbfa5720e3825fbc1b31.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Rescources/Artwork/Platforms/PlatformsA/Bacon_w_Syrup.PNG"
-dest_files=["res://.godot/imported/Bacon_w_Syrup.PNG-24f7627f2a4f194b5538eca32d37a58f.ctex"]
+source_file="res://Resources/Artwork/Platforms/PlatformsA/Bacon_w_Syrup.PNG"
+dest_files=["res://.godot/imported/Bacon_w_Syrup.PNG-620b3895d3c2dbfa5720e3825fbc1b31.ctex"]
 
 [params]
 

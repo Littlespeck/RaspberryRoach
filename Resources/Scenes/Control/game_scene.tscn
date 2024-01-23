@@ -1,9 +1,17 @@
-[gd_scene load_steps=2 format=3 uid="uid://btekk4rkhyl4r"]
+[gd_scene load_steps=4 format=3 uid="uid://dq2pr0e1iok7"]
 
 [ext_resource type="Script" path="res://Resources/Scripts/game_scene.gd" id="1_x8dkm"]
+[ext_resource type="PackedScene" uid="uid://piq5b0lx27wv" path="res://Resources/Scenes/Objects/bacon_platform.tscn" id="2_ppket"]
+
+[sub_resource type="Curve2D" id="Curve2D_miy5y"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 114, 658, 0, 0, 0, 0, 651, 658)
+}
+point_count = 2
 
 [node name="GameScene" type="Node2D"]
 script = ExtResource("1_x8dkm")
+platform_scene = ExtResource("2_ppket")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -12,3 +20,14 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(360, 639)
+position_smoothing_enabled = true
+
+[node name="PlatformPath" type="Path2D" parent="."]
+position = Vector2(-22, 791)
+curve = SubResource("Curve2D_miy5y")
+
+[node name="PlatformSpawnLocation" type="PathFollow2D" parent="PlatformPath"]
+position = Vector2(114, 658)

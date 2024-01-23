@@ -1,3 +1,15 @@
-[gd_scene format=3 uid="uid://cyf5molij3ilc"]
+[gd_scene load_steps=2 format=3 uid="uid://cyf5molij3ilc"]
+
+[ext_resource type="Texture2D" uid="uid://dgkxk2xcu5je7" path="res://Resources/Artwork/Background.bmp" id="1_e43gt"]
 
 [node name="Map1" type="Node2D"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(720, 1280)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("1_e43gt")
+centered = false
