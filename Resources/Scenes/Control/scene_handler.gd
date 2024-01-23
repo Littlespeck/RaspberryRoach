@@ -21,17 +21,21 @@ func load_options_menu():
 
 
 func load_main_menu():
-	get_node("MainMenu/M/NewGame").connect("pressed", on_new_game_pressed)
+	get_node("main_menu_base/options_container/start_game_button").connect("pressed", on_new_game_pressed)
+	get_node("main_menu_base/options_container/quit_game_button").connect("pressed", on_quit_game_pressed)
 
 ##
 ##Buttons
 ##
 
 func on_new_game_pressed():
-	get_node("MainMenu").queue_free()
+	get_node("main_menu_base").queue_free()
 	var game_scene = load("res://Resources/Scenes/Control/game_scene.tscn").instantiate()
 	add_child(game_scene)
 	game_scene.connect("game_finished", unload_game)
+
+func on_quit_game_pressed():
+	get_tree().quit
 
 func unload_game(score):
 	get_node("GameScene").queue_free()
@@ -40,7 +44,7 @@ func unload_game(score):
 	score_table.remove_at(3)
 	print(score_table)
 	
-	var main_menu = load("res://Resources/Scenes/Control/MainMenu.tscn").instantiate()
+	var main_menu = load("res://Resources/Scenes/UI/main_menu_base.tscn").instantiate()
 	add_child(main_menu)
 	load_main_menu()
 

@@ -1,11 +1,11 @@
 [gd_scene load_steps=3 format=3 uid="uid://c041qkep5dl2s"]
 
 [ext_resource type="Script" path="res://Resources/Scenes/Control/scene_handler.gd" id="1_jgchc"]
-[ext_resource type="PackedScene" uid="uid://dwvyp6yt1iamh" path="res://Resources/Scenes/Control/MainMenu.tscn" id="2_n8xgk"]
+[ext_resource type="PackedScene" uid="uid://d2a6qtqq5nxm2" path="res://Resources/Scenes/UI/main_menu_base.tscn" id="2_cwuy5"]
 
 [node name="SceneHandler" type="Node"]
 script = ExtResource("1_jgchc")
 
-[node name="MainMenu" parent="." instance=ExtResource("2_n8xgk")]
+[node name="main_menu_base" parent="." instance=ExtResource("2_cwuy5")]
 
-[editable path="MainMenu"]
+[editable path="main_menu_base"]

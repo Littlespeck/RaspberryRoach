@@ -54,6 +54,4 @@ layout_mode = 2
 text = "Quit
 "
 
-[connection signal="button_down" from="options_container/start_game_button" to="." method="_on_start_game_button_button_down"]
 [connection signal="button_down" from="options_container/options_menu_button" to="." method="_on_options_menu_button_button_down"]
-[connection signal="button_down" from="options_container/quit_game_button" to="." method="_on_quit_game_button_button_down"]
