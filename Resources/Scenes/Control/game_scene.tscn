@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://dq2pr0e1iok7"]
+[gd_scene load_steps=5 format=3 uid="uid://dq2pr0e1iok7"]
 
 [ext_resource type="Script" path="res://Resources/Scripts/game_scene.gd" id="1_x8dkm"]
 [ext_resource type="PackedScene" uid="uid://piq5b0lx27wv" path="res://Resources/Scenes/Objects/bacon_platform.tscn" id="2_ppket"]
+[ext_resource type="PackedScene" uid="uid://nmtdxfw8ty3o" path="res://Resources/Scenes/Objects/lettuce_platform.tscn" id="3_af5jj"]
 
 [sub_resource type="Curve2D" id="Curve2D_miy5y"]
 _data = {
@@ -11,7 +12,8 @@ point_count = 2
 
 [node name="GameScene" type="Node2D"]
 script = ExtResource("1_x8dkm")
-platform_scene = ExtResource("2_ppket")
+bacon_platform = ExtResource("2_ppket")
+lettuce_platform = ExtResource("3_af5jj")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -26,7 +28,7 @@ position = Vector2(360, 639)
 position_smoothing_enabled = true
 
 [node name="PlatformPath" type="Path2D" parent="."]
-position = Vector2(-22, 791)
+position = Vector2(-22, 885)
 curve = SubResource("Curve2D_miy5y")
 
 [node name="PlatformSpawnLocation" type="PathFollow2D" parent="PlatformPath"]

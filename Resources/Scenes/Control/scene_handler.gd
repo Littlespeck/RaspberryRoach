@@ -4,7 +4,6 @@ var score_table = []
 
 @export var control_root : Node
 
-var main_menu = preload("res://Resources/Scenes/UI/main_menu_base.tscn").instantiate()
 var options_menu = preload("res://Resources/Scenes/UI/options_base.tscn").instantiate()
 
 func _ready():
@@ -35,7 +34,7 @@ func on_new_game_pressed():
 	game_scene.connect("game_finished", unload_game)
 
 func on_quit_game_pressed():
-	get_tree().quit
+	get_tree().quit()
 
 func unload_game(score):
 	get_node("GameScene").queue_free()

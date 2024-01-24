@@ -7,9 +7,9 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	pass
 
 
-func _on_resolution_button_item_selected(index:int) -> void:
+func _on_resolution_button_item_selected(_index:int) -> void:
 	pass # Replace with function body.
