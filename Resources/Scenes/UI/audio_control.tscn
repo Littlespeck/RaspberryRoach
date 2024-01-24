@@ -1,12 +1,19 @@
-[gd_scene format=3 uid="uid://cf8o2syoaca3b"]
+[gd_scene load_steps=3 format=3 uid="uid://cf8o2syoaca3b"]
 
-[node name="audio_control" type="Control"]
+[ext_resource type="Script" path="res://Resources/Scripts/audio_control.gd" id="1_ee7j4"]
+[ext_resource type="AudioStream" uid="uid://cbsede0lkq20" path="res://02 Rekcahdam - Gimme My Sword! [LA - LOZ - LTTP - OOT].mp3" id="2_y17vq"]
+
+[node name="audio_control" type="Control" node_paths=PackedStringArray("master_slider", "music_slider", "sfx_slider")]
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+anchors_preset = 0
+offset_right = 720.0
+offset_bottom = 1280.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+script = ExtResource("1_ee7j4")
+master_slider = NodePath("MarginContainer/VBoxContainer/master_options/master_slider")
+music_slider = NodePath("MarginContainer/VBoxContainer/music_options/music_slider")
+sfx_slider = NodePath("MarginContainer/VBoxContainer/sfx_options/sfx_slider")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 0
@@ -15,6 +22,29 @@ offset_bottom = 40.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
+
+[node name="master_options" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 68.28)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="master_label" type="Label" parent="MarginContainer/VBoxContainer/master_options"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "            Master             "
+
+[node name="master_slider" type="HSlider" parent="MarginContainer/VBoxContainer/master_options"]
+clip_contents = true
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+max_value = 1.0
+step = 0.05
+value = 1.0
+tick_count = 5
+ticks_on_borders = true
 
 [node name="music_options" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 68.28)
@@ -61,3 +91,12 @@ step = 0.05
 value = 0.8
 tick_count = 5
 ticks_on_borders = true
+
+[node name="Music Test" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_y17vq")
+autoplay = true
+bus = &"Music"
+
+[connection signal="value_changed" from="MarginContainer/VBoxContainer/master_options/master_slider" to="." method="_on_master_slider_value_changed"]
+[connection signal="value_changed" from="MarginContainer/VBoxContainer/music_options/music_slider" to="." method="_on_music_slider_value_changed"]
+[connection signal="value_changed" from="MarginContainer/VBoxContainer/sfx_options/sfx_slider" to="." method="_on_sfx_slider_value_changed"]

@@ -16,4 +16,5 @@ func _on_start_game_button_button_down():
 	pass # Replace with function body.
 
 func _on_toggle_menu():
-	pass
+	emit_signal("toggle_options")
+	
