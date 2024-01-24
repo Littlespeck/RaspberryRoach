@@ -38,6 +38,7 @@ func on_quit_game_pressed():
 
 func unload_game(score):
 	get_node("GameScene").queue_free()
+	$Munch.play()
 	score_table.append(score)
 	score_table.sort_custom(descending_sort)
 	score_table.remove_at(3)

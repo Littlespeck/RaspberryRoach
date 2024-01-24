@@ -1,11 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://c041qkep5dl2s"]
+[gd_scene load_steps=4 format=3 uid="uid://c041qkep5dl2s"]
 
 [ext_resource type="Script" path="res://Resources/Scenes/Control/scene_handler.gd" id="1_jgchc"]
 [ext_resource type="PackedScene" uid="uid://d2a6qtqq5nxm2" path="res://Resources/Scenes/UI/main_menu_base.tscn" id="2_cwuy5"]
+[ext_resource type="AudioStream" uid="uid://cm331qdt8stl" path="res://Resources/Sounds/Munch.wav" id="3_r5d0i"]
 
 [node name="SceneHandler" type="Node"]
 script = ExtResource("1_jgchc")
 
 [node name="main_menu_base" parent="." instance=ExtResource("2_cwuy5")]
+
+[node name="Munch" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_r5d0i")
 
 [editable path="main_menu_base"]
