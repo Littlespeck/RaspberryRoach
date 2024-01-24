@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://c5rj55qg500en"]
+
+[ext_resource type="Texture2D" uid="uid://xywnxuqpv5pq" path="res://Resources/Artwork/Gummy.PNG" id="1_y0h0j"]
+[ext_resource type="Script" path="res://Resources/Scripts/FoodDrop.gd" id="2_m4by5"]
+
+[node name="Gummy" type="Sprite2D"]
+position = Vector2(144, 919)
+texture = ExtResource("1_y0h0j")
+script = ExtResource("2_m4by5")

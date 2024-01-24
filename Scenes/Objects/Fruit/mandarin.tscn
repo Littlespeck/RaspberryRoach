@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://8juj1rtxwh5c"]
+
+[ext_resource type="Texture2D" uid="uid://cu2i1tv0ko4cw" path="res://Resources/Artwork/Mandarin.PNG" id="1_oyrx6"]
+[ext_resource type="Script" path="res://Resources/Scripts/FoodDrop.gd" id="2_yes8i"]
+
+[node name="Mandarin" type="Sprite2D"]
+position = Vector2(64, 1063)
+texture = ExtResource("1_oyrx6")
+script = ExtResource("2_yes8i")

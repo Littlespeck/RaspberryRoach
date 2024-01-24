@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://fi5wq23rmh87"]
+
+[ext_resource type="Texture2D" uid="uid://gh673ipnjr1k" path="res://Resources/Artwork/Brokkoli.PNG" id="1_8o07m"]
+[ext_resource type="Script" path="res://Resources/Scripts/FoodDrop.gd" id="2_tdtw3"]
+
+[node name="Brokkoli" type="Sprite2D"]
+position = Vector2(115, 370)
+texture = ExtResource("1_8o07m")
+script = ExtResource("2_tdtw3")

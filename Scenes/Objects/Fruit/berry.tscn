@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://rm5cvf1ohepv"]
+
+[ext_resource type="Texture2D" uid="uid://dj8872q05gaut" path="res://Resources/Artwork/Berry.PNG" id="1_fjqkt"]
+[ext_resource type="Script" path="res://Resources/Scripts/FoodDrop.gd" id="2_qy2s7"]
+
+[node name="Berry" type="Sprite2D"]
+position = Vector2(404, 264)
+texture = ExtResource("1_fjqkt")
+script = ExtResource("2_qy2s7")

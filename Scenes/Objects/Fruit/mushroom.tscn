@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://spftmjlleqk"]
+
+[ext_resource type="Texture2D" uid="uid://pn4g282k4i0e" path="res://Resources/Artwork/Mushroom.PNG" id="1_nvya8"]
+[ext_resource type="Script" path="res://Resources/Scripts/FoodDrop.gd" id="2_tqn7x"]
+
+[node name="Mushroom" type="Sprite2D"]
+position = Vector2(202, 1114)
+texture = ExtResource("1_nvya8")
+script = ExtResource("2_tqn7x")

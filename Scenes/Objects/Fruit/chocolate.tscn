@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://csd7sxig3m625"]
+
+[ext_resource type="Texture2D" uid="uid://dq4ktefm1l35r" path="res://Resources/Artwork/Chocolate.PNG" id="1_k484j"]
+[ext_resource type="Script" path="res://Resources/Scripts/FoodDrop.gd" id="2_jokh0"]
+
+[node name="Chocolate" type="Sprite2D"]
+position = Vector2(123, 785)
+texture = ExtResource("1_k484j")
+script = ExtResource("2_jokh0")

@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://xwuoht1r6qf4"]
+
+[ext_resource type="Script" path="res://Resources/Scripts/AnimatedBackground.gd" id="1_rcpq7"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 750.0
+offset_bottom = 1312.0
+color = Color(1, 0.67451, 1, 1)
+script = ExtResource("1_rcpq7")
+
+[node name="FoodSpawnTimer" type="Timer" parent="."]
+wait_time = 0.75
+autostart = true
+
+[connection signal="timeout" from="FoodSpawnTimer" to="ColorRect" method="_on_food_spawn_timer_timeout"]

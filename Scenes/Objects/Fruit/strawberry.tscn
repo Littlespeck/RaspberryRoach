@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://c3lregkdxan5k"]
+
+[ext_resource type="Texture2D" uid="uid://dl27lnqd6mr3k" path="res://Resources/Artwork/Strawberry.PNG" id="1_80xb3"]
+[ext_resource type="Script" path="res://Resources/Scripts/FoodDrop.gd" id="2_pimqr"]
+
+[node name="Strawberry" type="Sprite2D"]
+position = Vector2(87, 1229)
+texture = ExtResource("1_80xb3")
+script = ExtResource("2_pimqr")
