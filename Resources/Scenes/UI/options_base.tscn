@@ -81,11 +81,6 @@ text = "Audio"
 clip_contents = true
 layout_mode = 2
 script = ExtResource("2_dq7ql")
-audio_control = null
-video_control = null
-language_control = null
-keybind_control = null
-reset_control = null
 
 [node name="audio_control" parent="MarginContainer/SplitContainer/options_container" instance=ExtResource("2_df82c")]
 visible = false
