@@ -20,7 +20,7 @@ func _ready():
 	add_child(start_platform)
 	player_character = load("res://Resources/Scenes/Objects/PlayerSprite.tscn").instantiate()
 	player_character.position = Vector2(360, 900)
-	player_character.scale = Vector2(.2, .2)
+	player_character.scale = Vector2(.20, .20)
 	add_child(player_character)
 	get_node("Camera2D").position.y = camera_altitude
 	
@@ -34,6 +34,7 @@ func _process(_delta):
 	if get_node("Roach PC").position.y > get_node("Camera2D").position.y + screen_size:
 		var score = -camera_altitude
 		emit_signal("game_finished", score)
+		print(score)
 	
 func _physics_process(_delta):
 	if get_node("Camera2D").position.y + 1000 > get_node("PlatformPath").position.y:

@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://b6vo73s4a8cop"]
+
+[ext_resource type="Texture2D" uid="uid://pn4g282k4i0e" path="res://Resources/Artwork/Mushroom.PNG" id="1_nu31b"]
+[ext_resource type="Script" path="res://Resources/Scripts/FoodMovement.gd" id="2_yjhek"]
+
+[node name="Mushroom" type="Sprite2D"]
+position = Vector2(832, 1227)
+texture = ExtResource("1_nu31b")
+script = ExtResource("2_yjhek")

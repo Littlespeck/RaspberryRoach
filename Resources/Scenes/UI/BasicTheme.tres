@@ -1,0 +1,8 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://uebiqdcelw1p"]
+
+[ext_resource type="StyleBox" uid="uid://cjh0wgkuhg1f7" path="res://Resources/Scenes/UI/Basic Button.tres" id="1_b61tu"]
+
+[resource]
+Button/colors/font_color = Color(0, 0, 0, 1)
+Button/font_sizes/font_size = 28
+Button/styles/normal = ExtResource("1_b61tu")
