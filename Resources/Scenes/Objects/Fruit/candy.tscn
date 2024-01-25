@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://gh7a7f4b6vhn"]
+
+[ext_resource type="Texture2D" uid="uid://bxng1e8a3jv8v" path="res://Resources/Artwork/Candy.PNG" id="1_wqqfw"]
+[ext_resource type="Script" path="res://Resources/Scripts/FoodMovement.gd" id="2_cwumq"]
+
+[node name="Candy" type="Sprite2D"]
+position = Vector2(674, 1125)
+texture = ExtResource("1_wqqfw")
+script = ExtResource("2_cwumq")

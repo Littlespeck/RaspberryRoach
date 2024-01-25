@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://dgadgaubr2thx"]
+
+[ext_resource type="Texture2D" uid="uid://dj8872q05gaut" path="res://Resources/Artwork/Berry.PNG" id="1_atgs2"]
+[ext_resource type="Script" path="res://Resources/Scripts/FoodMovement.gd" id="2_p7xev"]
+
+[node name="Berry" type="Sprite2D"]
+position = Vector2(549, 965)
+texture = ExtResource("1_atgs2")
+script = ExtResource("2_p7xev")
