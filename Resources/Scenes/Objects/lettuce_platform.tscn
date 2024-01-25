@@ -10,7 +10,7 @@ size = Vector2(763, 20)
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_xqntu")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["Platform"]]
 z_index = -99
 z_as_relative = false
 position = Vector2(-1.5, 0)

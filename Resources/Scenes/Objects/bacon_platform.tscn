@@ -10,7 +10,7 @@ size = Vector2(536, 33)
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_70btr")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["Platform"]]
 z_index = -99
 position = Vector2(-3, -16.5)
 shape = SubResource("RectangleShape2D_a1q1j")

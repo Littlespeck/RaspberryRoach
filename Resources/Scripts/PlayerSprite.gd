@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+signal HasJumped
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -600.0
@@ -14,7 +15,6 @@ var face_right = true
 var coyote_frames = 6  # How many in-air frames to allow jumping
 var coyote = false  # Track whether we're in coyote time or not
 var last_floor = false  # Last frame's on-floor state
-var buffer_timer : float = 0.0
 
 func _ready():
 	$CoyoteTimer.wait_time = coyote_frames / 60.0
@@ -23,23 +23,19 @@ func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y += gravity * delta
-		if buffer_timer > 0:
-			buffer_timer -= delta
 		
 	if !is_on_floor() and last_floor and !jumping:
 		coyote = true
 		$CoyoteTimer.start()
 
 	# Handle jump.
-	if (Input.is_action_just_pressed("Jump") or buffer_timer > 0) and (is_on_floor() or coyote):
+	if Input.is_action_just_pressed("ui_accept") and (is_on_floor() or coyote):
 		velocity.y = JUMP_VELOCITY
 		jumping = true
-		buffer_timer = 0
-	elif Input.is_action_just_pressed("Jump"):
-		buffer_timer = 0.18
+		HasJumped.emit()
 
 	# Get the input direction and handle the movement/deceleration.
-	var direction = Input.get_axis("Move_Left", "Move_Right")
+	var direction = Input.get_axis("ui_left", "ui_right")
 	if direction:
 		velocity.x = direction * SPEED
 	else:
