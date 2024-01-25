@@ -87,5 +87,5 @@ func UpdateScore():
 func  IncreaseScore():
 	score += JumpScore
 
-func GameFinished(score):
-	emit_signal("game_finished", score)
+func GameFinished(finalscore):
+	emit_signal("game_finished", finalscore)

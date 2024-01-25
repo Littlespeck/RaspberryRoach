@@ -54,4 +54,6 @@ layout_mode = 2
 text = "Quit
 "
 
+[node name="FoodSpawnTimer" type="Timer" parent="."]
+
 [connection signal="button_down" from="options_container/options_menu_button" to="." method="_on_options_menu_button_button_down"]
