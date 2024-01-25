@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://dmhhrvwgj85rc"]
+
+[ext_resource type="Texture2D" uid="uid://cu2i1tv0ko4cw" path="res://Resources/Artwork/Mandarin.PNG" id="1_7d43b"]
+[ext_resource type="Script" path="res://Resources/Scripts/FoodMovement.gd" id="2_20v3s"]
+
+[node name="Mandarin" type="Sprite2D"]
+position = Vector2(704, 1325)
+texture = ExtResource("1_7d43b")
+script = ExtResource("2_20v3s")

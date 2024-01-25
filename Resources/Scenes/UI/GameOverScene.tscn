@@ -1,0 +1,58 @@
+[gd_scene load_steps=4 format=3 uid="uid://bdi3vl82y6ygu"]
+
+[ext_resource type="Script" path="res://Resources/Scenes/UI/GameOverScene.gd" id="1_a2fc7"]
+[ext_resource type="Texture2D" uid="uid://dgkxk2xcu5je7" path="res://Resources/Artwork/Background.bmp" id="1_i02xr"]
+[ext_resource type="Theme" uid="uid://uebiqdcelw1p" path="res://Resources/Scenes/UI/BasicTheme.tres" id="1_v0dna"]
+
+[node name="GameOverScene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -69.0
+offset_right = 62.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_a2fc7")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -11.0
+offset_top = -73.0
+offset_right = 889.0
+offset_bottom = 1527.0
+texture = ExtResource("1_i02xr")
+
+[node name="ButtonContainer" type="AspectRatioContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -216.5
+offset_top = -536.0
+offset_right = 216.5
+offset_bottom = -108.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ButtonContainer"]
+layout_mode = 2
+
+[node name="PlayAgainButton" type="Button" parent="ButtonContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("1_v0dna")
+text = "Play Again"
+
+[node name="MainMenuButton" type="Button" parent="ButtonContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("1_v0dna")
+text = "Main Menu"
+
+[connection signal="pressed" from="ButtonContainer/VBoxContainer/PlayAgainButton" to="." method="_on_play_again_button_pressed"]
+[connection signal="pressed" from="ButtonContainer/VBoxContainer/MainMenuButton" to="." method="_on_main_menu_button_pressed"]

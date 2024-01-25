@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://1u1xplonv517"]
+
+[ext_resource type="Texture2D" uid="uid://cq5322nob3111" path="res://Resources/Artwork/Carrot.PNG" id="1_ia2fw"]
+[ext_resource type="Script" path="res://Resources/Scripts/FoodMovement.gd" id="2_1fbht"]
+
+[node name="Carrot" type="Sprite2D"]
+position = Vector2(490, 1184)
+texture = ExtResource("1_ia2fw")
+script = ExtResource("2_1fbht")

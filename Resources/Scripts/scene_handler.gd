@@ -1,13 +1,17 @@
 extends Node
 
+signal MainMenuPressed
+signal PlayAagainPressed
+
 var score_table = []
+var GameOver = false
 
 @export var control_root : Node
 var start_button : Button
 var options_button : Button
 var quit_button : Button
 signal _on_toggle_options(bool)
-
+@onready var game_over_scene = preload("res://Resources/Scenes/UI/GameOverScene.tscn")
 var options_menu = preload("res://Resources/Scenes/UI/options_base.tscn").instantiate()
 
 func _ready():
@@ -17,6 +21,12 @@ func _ready():
 	
 	load_options_menu()
 	load_main_menu()
+	#PlayAagainPressed.connect()
+
+func _physics_process(delta):
+	if GameOver:
+		get_node("GameOverScene").connect("MainMenuPressed", _on_main_menu_button_pressed)
+		GameOver = false
 
 func load_options_menu():
 	get_tree().root.add_child.call_deferred(options_menu)
@@ -62,13 +72,20 @@ func unload_game(score):
 	score_table.sort_custom(descending_sort)
 	score_table.remove_at(3)
 	print(score_table)
+	GameOver = true
 	
+	var game_over_scene = load("res://Resources/Scenes/UI/GameOverScene.tscn").instantiate()
+	add_child(game_over_scene)
+
+func _on_main_menu_button_pressed():
+	get_node("GameOverScene").queue_free()
 	var main_menu = load("res://Resources/Scenes/UI/main_menu_base.tscn").instantiate()
 	add_child(main_menu)
 	load_main_menu()
-
 
 func descending_sort(a, b):
 	if a > b:
 		return true
 	return false
+
+
