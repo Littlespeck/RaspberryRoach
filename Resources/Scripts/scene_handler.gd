@@ -49,8 +49,8 @@ func unload_game(score):
 	
 	add_child(game_over_scene)
 	
-	get_node("GameOverScene/ButtonContainer/VBoxContainer/PlayAgainButton").connect("Pressed", on_main_menu_button_pressed)
-	get_node("GameOverScene/ButtonContainer/VBoxContainer/MainMenuButton").connect("Pressed", on_play_again_button_pressed)
+	get_node("GameOverScene/ButtonContainer/VBoxContainer/MainMenuButton").connect("pressed", on_main_menu_button_pressed)
+	get_node("GameOverScene/ButtonContainer/VBoxContainer/PlayAgainButton").connect("pressed", on_play_again_button_pressed)
 
 func on_main_menu_button_pressed():
 	print("pressed")
