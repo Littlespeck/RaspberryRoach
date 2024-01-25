@@ -1,0 +1,17 @@
+keys,en,es,de,fr,pt
+START,Start Game,Empezar juego,Spiel beginnen,Démarrer jeu,Começar o jogo
+OPTION,Options,Opciones,Optionen,Possibilités,Opções
+QUIT,Quit,Abandonar,Aufhören,Quitter,Desistir
+LANUGAGE,Language,Idioma,Sprache,Langue,Linguagem
+KEYBIND,Keybind,Combinación de teclas,Tastenkombination,Affectation de touches,Teclado
+VIDEO,Video,Video,Video,Vidéo,Vídeo
+AUDIO,Audio,Audio,Audio,l'audio,Áudio
+SAVE,Save,Ahorrar,Speichern,Sauvegarder,Salvar
+BACK,Back,Atrás,Zurück,Dos,Voltar
+MASTER_AUDIO,Master,Audio maestro,Master-Audio,Audio principal,Áudio mestre
+MUSIC,Music,Música,Musik,Musique,Música
+SFX,Sound Effects,Efectos de sonido,Soundeffekte,Effets sonores,Efeitos sonoros
+FULLSCREEN,Fullscreen,Pantalla completa,Ganzer Bildschirm,Plein écran,Tela cheia
+EXC_FULLSCREEN,Exclusive Fullscreen,Pantalla completa exclusiva,Exklusiver Vollbildmodus,Plein écran exclusif,Tela cheia exclusiva
+WINDOWED,Windowed,modo ventana,Mit Fenster,Fenêtré,Janela
+MAX_FRAMERATE,Max Framerate,límite de velocidad de fotogramas,Bildratenbegrenzung,limite de fréquence d'images,limite de taxa de quadros

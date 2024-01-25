@@ -1,10 +1,16 @@
-[gd_scene format=3 uid="uid://bitluopo734ft"]
+[gd_scene format=3 uid="uid://cco0einruidcd"]
 
-[node name="reset_control" type="Control"]
+[node name="save_control" type="Control"]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 364.0
 offset_bottom = 271.0
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 364.0
+offset_bottom = 271.0
+color = Color(0.196078, 0.196078, 0.196078, 1)
 
 [node name="reset_container" type="PanelContainer" parent="."]
 layout_mode = 0
@@ -15,16 +21,18 @@ offset_bottom = 271.0
 layout_mode = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="reset_container/VBoxContainer"]
-custom_minimum_size = Vector2(0, 17.405)
+custom_minimum_size = Vector2(0, 76.155)
 layout_mode = 2
 
 [node name="reset_label1" type="Label" parent="reset_container/VBoxContainer"]
+visible = false
 layout_mode = 2
-text = "Resolution settings will revert in"
+text = "Save Changes?"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="countdown" type="Label" parent="reset_container/VBoxContainer"]
+visible = false
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 theme_override_font_sizes/font_size = 40
@@ -34,7 +42,7 @@ vertical_alignment = 1
 
 [node name="reset_label2" type="Label" parent="reset_container/VBoxContainer"]
 layout_mode = 2
-text = "Keep changes?"
+text = "Save all changes?"
 horizontal_alignment = 1
 vertical_alignment = 1
 

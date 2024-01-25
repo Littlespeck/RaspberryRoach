@@ -11,9 +11,10 @@ var face_right = true
 
 #Coyote Time Variables
 #player walks off the edge of a platform we still allow them to jump as if they were still on the ground for a few frames
-var coyote_frames = 5  # How many in-air frames to allow jumping
+var coyote_frames = 6  # How many in-air frames to allow jumping
 var coyote = false  # Track whether we're in coyote time or not
 var last_floor = false  # Last frame's on-floor state
+var buffer_timer : float = 0.0
 
 func _ready():
 	$CoyoteTimer.wait_time = coyote_frames / 60.0
@@ -22,26 +23,30 @@ func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y += gravity * delta
+		if buffer_timer > 0:
+			buffer_timer -= delta
 		
+	if !is_on_floor() and last_floor and !jumping:
+		coyote = true
+		$CoyoteTimer.start()
 
 	# Handle jump.
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor() and !jumping:
+	if (Input.is_action_just_pressed("Jump") or buffer_timer > 0) and (is_on_floor() or coyote):
 		velocity.y = JUMP_VELOCITY
 		jumping = true
-		$CoyoteTimer.start()
-	if Input.is_action_just_pressed("ui_accept") and $CoyoteTimer.time_left >= 0 and !jumping:
-		velocity.y = JUMP_VELOCITY
-		jumping = true
-		$CoyoteTimer.stop()
+		buffer_timer = 0
+	elif Input.is_action_just_pressed("Jump"):
+		buffer_timer = 0.18
 
 	# Get the input direction and handle the movement/deceleration.
-	var direction = Input.get_axis("ui_left", "ui_right")
+	var direction = Input.get_axis("Move_Left", "Move_Right")
 	if direction:
 		velocity.x = direction * SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 	
 	move_and_slide()
+	last_floor = is_on_floor()
 	
 	##
 	##Animations
@@ -68,3 +73,8 @@ func _physics_process(delta):
 	if velocity.x < 0 and face_right == true:
 		scale.x = -.2
 		face_right = false
+
+
+
+func _on_coyote_timer_timeout():
+	coyote = false
