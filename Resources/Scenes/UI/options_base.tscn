@@ -1,34 +1,20 @@
-[gd_scene load_steps=11 format=3 uid="uid://cgp65oyhp6efv"]
+[gd_scene load_steps=9 format=3 uid="uid://cgp65oyhp6efv"]
 
 [ext_resource type="Theme" uid="uid://dfmftmyq25pj4" path="res://Resources/Placeholder/UI_Theme.tres" id="1_6dol4"]
 [ext_resource type="Script" path="res://Resources/Scripts/options_base.gd" id="1_7e45c"]
 [ext_resource type="PackedScene" uid="uid://cf8o2syoaca3b" path="res://Resources/Scenes/UI/audio_control.tscn" id="2_df82c"]
 [ext_resource type="Script" path="res://Resources/Scripts/options_container.gd" id="2_dq7ql"]
-[ext_resource type="Script" path="res://Resources/Scenes/UI/button_container.gd" id="3_3gqc2"]
 [ext_resource type="PackedScene" uid="uid://e2s5xorg7w4i" path="res://Resources/Scenes/UI/video_control.tscn" id="3_fapmd"]
-[ext_resource type="Theme" uid="uid://uebiqdcelw1p" path="res://Resources/Scenes/UI/BasicTheme.tres" id="3_inxuv"]
-[ext_resource type="Theme" uid="uid://b4cqnndpuponl" path="res://Resources/Scenes/UI/BasicTheme_dys.tres" id="4_p14qu"]
 [ext_resource type="PackedScene" uid="uid://bv0hnp07y0cqr" path="res://Resources/Scenes/UI/keybind_control.tscn" id="5_jexhr"]
+[ext_resource type="PackedScene" uid="uid://bitluopo734ft" path="res://Resources/Scenes/UI/reset_container.tscn" id="5_x73hj"]
 [ext_resource type="PackedScene" uid="uid://dou4xu1tk0vbu" path="res://Resources/Scenes/UI/language_control.tscn" id="6_stvc7"]
 
-[node name="options_base" type="Control" node_paths=PackedStringArray("options_container", "buttons_container", "popup_menu")]
+[node name="options_base" type="Control"]
 layout_mode = 3
-anchor_top = 0.213
-anchor_right = 1.0
-anchor_bottom = 0.72
-offset_top = 0.359985
-offset_bottom = -0.600037
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme = ExtResource("1_6dol4")
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
 script = ExtResource("1_7e45c")
-options_container = NodePath("MarginContainer/SplitContainer/options_container")
-buttons_container = NodePath("MarginContainer/SplitContainer/button_container")
-popup_menu = NodePath("save_container")
-base_theme = ExtResource("3_inxuv")
-dyslexia_theme = ExtResource("4_p14qu")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
@@ -40,25 +26,24 @@ grow_vertical = 2
 color = Color(0, 0, 0, 0.223529)
 
 [node name="ColorRect2" type="ColorRect" parent="."]
-visible = false
 layout_mode = 2
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 26.0
+offset_left = 43.0
 offset_top = 33.0
-offset_right = -474.0
+offset_right = -844.0
 offset_bottom = -30.0
 size_flags_vertical = 3
-color = Color(0.121569, 0.121569, 0.121569, 0.745098)
+color = Color(0.121569, 0.121569, 0.121569, 1)
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 26.0
+offset_left = 43.0
 offset_top = 33.0
-offset_right = -29.0
+offset_right = -62.0
 offset_bottom = -30.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -66,53 +51,41 @@ theme = ExtResource("1_6dol4")
 
 [node name="SplitContainer" type="HSplitContainer" parent="MarginContainer"]
 layout_mode = 2
-split_offset = 220
+split_offset = 265
 dragger_visibility = 1
 
-[node name="button_container" type="VBoxContainer" parent="MarginContainer/SplitContainer" node_paths=PackedStringArray("language_button", "video_button", "audio_button", "keybind_button")]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/SplitContainer"]
 layout_mode = 2
-script = ExtResource("3_3gqc2")
-language_button = NodePath("Language")
-video_button = NodePath("Video")
-audio_button = NodePath("Audio")
-keybind_button = NodePath("Keybind")
 
-[node name="Language" type="Button" parent="MarginContainer/SplitContainer/button_container"]
+[node name="Keybind" type="Button" parent="MarginContainer/SplitContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
-disabled = true
-text = "LANUGAGE"
+text = "Keybindings"
 
-[node name="Video" type="Button" parent="MarginContainer/SplitContainer/button_container"]
+[node name="Language" type="Button" parent="MarginContainer/SplitContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
-disabled = true
-text = "VIDEO"
+text = "Language"
 
-[node name="Audio" type="Button" parent="MarginContainer/SplitContainer/button_container"]
+[node name="Video" type="Button" parent="MarginContainer/SplitContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
-disabled = true
-text = "AUDIO"
+text = "Video"
 
-[node name="Keybind" type="Button" parent="MarginContainer/SplitContainer/button_container"]
+[node name="Audio" type="Button" parent="MarginContainer/SplitContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
-disabled = true
-text = "KEYBIND"
+text = "Audio"
 
-[node name="options_container" type="PanelContainer" parent="MarginContainer/SplitContainer" node_paths=PackedStringArray("audio_control_node", "audio_control", "video_control_node", "video_control", "language_control_node", "language_control", "keybind_control_node", "reset_control_node")]
+[node name="options_container" type="PanelContainer" parent="MarginContainer/SplitContainer" node_paths=PackedStringArray("audio_control", "video_control", "language_control", "keybind_control", "reset_control")]
 clip_contents = true
 layout_mode = 2
 script = ExtResource("2_dq7ql")
-audio_control_node = NodePath("audio_control")
 audio_control = NodePath("audio_control")
-video_control_node = NodePath("video_control")
 video_control = NodePath("video_control")
-language_control_node = NodePath("language_control")
 language_control = NodePath("language_control")
-keybind_control_node = NodePath("keybind_control")
-reset_control_node = NodePath("../../../save_container")
+keybind_control = NodePath("keybind_control")
+reset_control = NodePath("../../../reset_control")
 
 [node name="audio_control" parent="MarginContainer/SplitContainer/options_container" instance=ExtResource("2_df82c")]
 visible = false
@@ -130,72 +103,30 @@ layout_mode = 2
 visible = false
 layout_mode = 2
 
+[node name="reset_control" parent="." instance=ExtResource("5_x73hj")]
+visible = false
+offset_left = 420.0
+offset_top = 173.0
+offset_right = 784.0
+offset_bottom = 444.0
+
 [node name="back_button" type="Button" parent="."]
 layout_mode = 0
-offset_left = 151.0
-offset_top = 547.0
-offset_right = 232.0
-offset_bottom = 584.0
-text = "BACK"
+offset_left = 187.0
+offset_top = 565.0
+offset_right = 249.0
+offset_bottom = 602.0
+text = "Back"
 
 [node name="save_button" type="Button" parent="."]
 layout_mode = 0
-offset_left = 47.0
-offset_top = 547.0
-offset_right = 128.0
-offset_bottom = 584.0
-text = "SAVE"
+offset_left = 84.0
+offset_top = 565.0
+offset_right = 146.0
+offset_bottom = 602.0
+text = "Save"
 
-[node name="save_container" type="PanelContainer" parent="."]
-visible = false
-layout_mode = 0
-offset_left = 207.0
-offset_top = 178.0
-offset_right = 571.0
-offset_bottom = 449.0
-
-[node name="VBoxContainer" type="VBoxContainer" parent="save_container"]
-layout_mode = 2
-
-[node name="MarginContainer" type="MarginContainer" parent="save_container/VBoxContainer"]
-custom_minimum_size = Vector2(0, 76.155)
-layout_mode = 2
-
-[node name="reset_label2" type="Label" parent="save_container/VBoxContainer"]
-layout_mode = 2
-text = "Save all changes?"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="MarginContainer3" type="MarginContainer" parent="save_container/VBoxContainer"]
-custom_minimum_size = Vector2(0, 17.405)
-layout_mode = 2
-
-[node name="HBoxContainer" type="HBoxContainer" parent="save_container/VBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_stretch_ratio = 0.0
-
-[node name="Button" type="Button" parent="save_container/VBoxContainer/HBoxContainer"]
-custom_minimum_size = Vector2(100, 50)
-layout_mode = 2
-text = "Yes"
-
-[node name="MarginContainer" type="MarginContainer" parent="save_container/VBoxContainer/HBoxContainer"]
-custom_minimum_size = Vector2(50, 0)
-layout_mode = 2
-
-[node name="Button2" type="Button" parent="save_container/VBoxContainer/HBoxContainer"]
-custom_minimum_size = Vector2(100, 50)
-layout_mode = 2
-text = "No
-"
-
-[connection signal="button_down" from="MarginContainer/SplitContainer/button_container/Language" to="MarginContainer/SplitContainer/options_container" method="_on_language_button_down"]
-[connection signal="button_down" from="MarginContainer/SplitContainer/button_container/Video" to="MarginContainer/SplitContainer/options_container" method="_on_video_button_down"]
-[connection signal="button_down" from="MarginContainer/SplitContainer/button_container/Audio" to="MarginContainer/SplitContainer/options_container" method="_on_audio_button_down"]
-[connection signal="button_down" from="MarginContainer/SplitContainer/button_container/Keybind" to="MarginContainer/SplitContainer/options_container" method="_on_keybind_button_down"]
-[connection signal="pressed" from="back_button" to="." method="_on_back_button_pressed"]
-[connection signal="button_down" from="save_button" to="." method="save_prefs"]
-[connection signal="pressed" from="save_container/VBoxContainer/HBoxContainer/Button" to="." method="save_prefs"]
-[connection signal="pressed" from="save_container/VBoxContainer/HBoxContainer/Button2" to="." method="_on_popup_no"]
+[connection signal="button_down" from="MarginContainer/SplitContainer/VBoxContainer/Keybind" to="MarginContainer/SplitContainer/options_container" method="_on_keybind_button_down"]
+[connection signal="button_down" from="MarginContainer/SplitContainer/VBoxContainer/Language" to="MarginContainer/SplitContainer/options_container" method="_on_language_button_down"]
+[connection signal="button_down" from="MarginContainer/SplitContainer/VBoxContainer/Video" to="MarginContainer/SplitContainer/options_container" method="_on_video_button_down"]
+[connection signal="button_down" from="MarginContainer/SplitContainer/VBoxContainer/Audio" to="MarginContainer/SplitContainer/options_container" method="_on_audio_button_down"]
