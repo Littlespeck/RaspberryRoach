@@ -1,7 +1,6 @@
 extends Node
 
-signal MainMenuPressed
-signal PlayAgainPressed
+signal toggle_options
 
 var score_table = []
 
@@ -21,6 +20,7 @@ func load_options_menu():
 func load_main_menu():
 	get_node("main_menu_base/options_container/start_game_button").connect("pressed", on_new_game_pressed)
 	get_node("main_menu_base/options_container/quit_game_button").connect("pressed", on_quit_game_pressed)
+	get_node("main_menu_base/options_container/options_menu_button").connect("pressed", on_options_menu_pressed)
 
 ##
 ##Buttons
@@ -65,6 +65,9 @@ func on_play_again_button_pressed():
 	var game_scene = load("res://Resources/Scenes/Control/game_scene.tscn").instantiate()
 	add_child(game_scene)
 	game_scene.connect("game_finished", unload_game)
+
+func on_options_menu_pressed():
+	emit_signal("toggle_options")
 	
 func descending_sort(a, b):
 	if a >= b:

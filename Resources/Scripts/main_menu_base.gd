@@ -1,8 +1,5 @@
 extends Node
 
-signal toggle_options()
-signal toggle_menu()
-
 const STRAWBERRY = preload("res://Resources/Scenes/Objects/Fruit/strawberry.tscn")
 const MUSHROOM = preload("res://Resources/Scenes/Objects/Fruit/mushroom.tscn")
 const MANDARIN = preload("res://Resources/Scenes/Objects/Fruit/mandarin.tscn")
@@ -17,13 +14,6 @@ const BERRY = preload("res://Resources/Scenes/Objects/Fruit/berry.tscn")
 
 func _ready():
 	randomize()
-
-func _on_options_menu_button_button_down():
-	_on_toggle_menu()
-
-func _on_toggle_menu():
-	emit_signal("toggle_options")
-	
 
 func ChooseFruit():
 	var randNum = randi_range(1,9)
