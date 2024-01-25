@@ -1,9 +1,18 @@
-[gd_scene load_steps=5 format=3 uid="uid://d2a6qtqq5nxm2"]
+[gd_scene load_steps=14 format=3 uid="uid://d2a6qtqq5nxm2"]
 
 [ext_resource type="Script" path="res://Resources/Scripts/main_menu_base.gd" id="1_3wa3v"]
 [ext_resource type="Texture2D" uid="uid://bkdcmb5hcui7d" path="res://Resources/Placeholder/CCE_Logo_Placeholder.png" id="1_m3c7e"]
 [ext_resource type="Texture2D" uid="uid://dgkxk2xcu5je7" path="res://Resources/Artwork/Background.bmp" id="2_yl860"]
+[ext_resource type="PackedScene" uid="uid://dgadgaubr2thx" path="res://Resources/Scenes/Objects/Fruit/berry.tscn" id="3_ju0hr"]
+[ext_resource type="PackedScene" uid="uid://kim3hv1hxlbp" path="res://Resources/Scenes/Objects/Fruit/brokkoli.tscn" id="4_gfihm"]
 [ext_resource type="Theme" uid="uid://uebiqdcelw1p" path="res://Resources/Scenes/UI/BasicTheme.tres" id="4_uguym"]
+[ext_resource type="PackedScene" uid="uid://gh7a7f4b6vhn" path="res://Resources/Scenes/Objects/Fruit/candy.tscn" id="5_ldvhv"]
+[ext_resource type="PackedScene" uid="uid://1u1xplonv517" path="res://Resources/Scenes/Objects/Fruit/carrot.tscn" id="6_4qf47"]
+[ext_resource type="PackedScene" uid="uid://dn8ajncnhntcu" path="res://Resources/Scenes/Objects/Fruit/chocolate.tscn" id="7_0kjj2"]
+[ext_resource type="PackedScene" uid="uid://d0eektf882boe" path="res://Resources/Scenes/Objects/Fruit/gummy.tscn" id="8_5nscc"]
+[ext_resource type="PackedScene" uid="uid://dmhhrvwgj85rc" path="res://Resources/Scenes/Objects/Fruit/mandarin.tscn" id="9_xo2wb"]
+[ext_resource type="PackedScene" uid="uid://b6vo73s4a8cop" path="res://Resources/Scenes/Objects/Fruit/mushroom.tscn" id="10_jfwrl"]
+[ext_resource type="PackedScene" uid="uid://ttfjkdqivhov" path="res://Resources/Scenes/Objects/Fruit/strawberry.tscn" id="11_nyfla"]
 
 [node name="main_menu_base" type="Control"]
 layout_mode = 3
@@ -27,6 +36,33 @@ layout_mode = 1
 anchors_preset = 0
 offset_right = 720.0
 offset_bottom = 1280.0
+
+[node name="Berry" parent="FoodContainer" instance=ExtResource("3_ju0hr")]
+position = Vector2(76, 671)
+
+[node name="Brokkoli" parent="FoodContainer" instance=ExtResource("4_gfihm")]
+position = Vector2(629, 854)
+
+[node name="Candy" parent="FoodContainer" instance=ExtResource("5_ldvhv")]
+position = Vector2(296, 234)
+
+[node name="Carrot" parent="FoodContainer" instance=ExtResource("6_4qf47")]
+position = Vector2(605, 164)
+
+[node name="Chocolate" parent="FoodContainer" instance=ExtResource("7_0kjj2")]
+position = Vector2(82, 1051)
+
+[node name="Gummy" parent="FoodContainer" instance=ExtResource("8_5nscc")]
+position = Vector2(568, 1184)
+
+[node name="Mandarin" parent="FoodContainer" instance=ExtResource("9_xo2wb")]
+position = Vector2(341, 551)
+
+[node name="Mushroom" parent="FoodContainer" instance=ExtResource("10_jfwrl")]
+position = Vector2(130, 60)
+
+[node name="Strawberry" parent="FoodContainer" instance=ExtResource("11_nyfla")]
+position = Vector2(605, 281)
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1

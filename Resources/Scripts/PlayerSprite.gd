@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+signal HasJumped
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -600.0
@@ -31,6 +32,7 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("ui_accept") and (is_on_floor() or coyote):
 		velocity.y = JUMP_VELOCITY
 		jumping = true
+		HasJumped.emit()
 
 	# Get the input direction and handle the movement/deceleration.
 	var direction = Input.get_axis("ui_left", "ui_right")

@@ -1,21 +1,21 @@
 extends Node
 
 signal MainMenuPressed
-signal PlayAagainPressed
+signal PlayAgainPressed
 
 var score_table = []
 var GameOver = false
 
 @export var control_root : Node
 @onready var game_over_scene = preload("res://Resources/Scenes/UI/GameOverScene.tscn")
-var options_menu = preload("res://Resources/Scenes/UI/options_base.tscn").instantiate()
+@onready var options_menu = preload("res://Resources/Scenes/UI/options_base.tscn").instantiate()
 
 func _ready():
 	for i in Globals.high_score_table:
 		score_table.append(Globals.high_score_table[i])
 	#load_options_menu()
 	load_main_menu()
-	#PlayAagainPressed.connect()
+	#PlayAgainPressed.connect()
 
 func _physics_process(delta):
 	if GameOver:
@@ -24,7 +24,6 @@ func _physics_process(delta):
 
 func load_options_menu():
 	get_tree().root.add_child.call_deferred(options_menu)
-
 
 func load_main_menu():
 	get_node("main_menu_base/options_container/start_game_button").connect("pressed", on_new_game_pressed)
@@ -62,8 +61,6 @@ func _on_main_menu_button_pressed():
 	load_main_menu()
 
 func descending_sort(a, b):
-	if a > b:
+	if a >= b:
 		return true
 	return false
-
-

@@ -1,8 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://dq2pr0e1iok7"]
+[gd_scene load_steps=8 format=3 uid="uid://dq2pr0e1iok7"]
 
 [ext_resource type="Script" path="res://Resources/Scripts/game_scene.gd" id="1_x8dkm"]
 [ext_resource type="PackedScene" uid="uid://piq5b0lx27wv" path="res://Resources/Scenes/Objects/bacon_platform.tscn" id="2_ppket"]
 [ext_resource type="PackedScene" uid="uid://nmtdxfw8ty3o" path="res://Resources/Scenes/Objects/lettuce_platform.tscn" id="3_af5jj"]
+[ext_resource type="Theme" uid="uid://uebiqdcelw1p" path="res://Resources/Scenes/UI/BasicTheme.tres" id="4_gqrwp"]
+[ext_resource type="Texture2D" uid="uid://bskdfhj8xxdn5" path="res://Resources/GobletSmall.png" id="4_oedde"]
 [ext_resource type="AudioStream" uid="uid://dch577rbgxgk0" path="res://Resources/Sounds/Retro Polka.ogg" id="4_p4u82"]
 
 [sub_resource type="Curve2D" id="Curve2D_miy5y"]
@@ -24,6 +26,29 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control"]
+clip_contents = true
+layout_mode = 2
+offset_right = 128.0
+offset_bottom = 128.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_oedde")
+
+[node name="ScoreLabel" type="RichTextLabel" parent="CanvasLayer/Control"]
+layout_mode = 2
+offset_left = 68.0
+offset_top = 8.0
+offset_right = 565.0
+offset_bottom = 53.0
+size_flags_horizontal = 3
+theme = ExtResource("4_gqrwp")
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 32
+bbcode_enabled = true
+text = "Score: 0"
+fit_content = true
+scroll_active = false
+
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(360, 639)
 position_smoothing_enabled = true
@@ -39,3 +64,5 @@ position = Vector2(114, 658)
 stream = ExtResource("4_p4u82")
 volume_db = -5.0
 autoplay = true
+
+[node name="PlatformContainer" type="Node2D" parent="."]
