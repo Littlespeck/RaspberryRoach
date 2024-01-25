@@ -14,7 +14,6 @@ var user_prefs : UserPreferences
 #@onready var my_node = $options_base
 
 func _ready():
-	Globals.connect("_toggle_options_menu", _on_toggle_options)
 	options_container.connect("_change_setting", on_change_setting)
 	user_prefs = UserPreferences.load_or_create_prefs()
 	options_container.user_prefs = user_prefs
@@ -41,6 +40,9 @@ func _on_back_button_pressed():
 func _on_popup_no():
 	Globals._reset_user_prefs.emit()
 	popup_menu.hide()
+	buttons_container._enable_buttons()
+	options_container._show_last_selected()
+	isDirty = false
 	_on_toggle_options()
 
 func on_change_setting(setting, value):
@@ -61,4 +63,4 @@ func _reset_user_prefs():
 	_check_theme(user_prefs.dyslexic_setting)
 
 func _on_toggle_options():
-	pass
+	Globals._toggle_options_menu.emit()

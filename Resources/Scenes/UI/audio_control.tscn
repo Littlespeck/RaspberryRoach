@@ -1,7 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://cf8o2syoaca3b"]
+[gd_scene load_steps=2 format=3 uid="uid://cf8o2syoaca3b"]
 
 [ext_resource type="Script" path="res://Resources/Scripts/audio_control.gd" id="1_ee7j4"]
-[ext_resource type="AudioStream" uid="uid://cbsede0lkq20" path="res://02 Rekcahdam - Gimme My Sword! [LA - LOZ - LTTP - OOT].mp3" id="2_y17vq"]
 
 [node name="audio_control" type="Control" node_paths=PackedStringArray("master_slider", "music_slider", "sfx_slider")]
 layout_mode = 3
@@ -91,11 +90,6 @@ step = 0.05
 value = 0.8
 tick_count = 5
 ticks_on_borders = true
-
-[node name="Music Test" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("2_y17vq")
-autoplay = true
-bus = &"Music"
 
 [connection signal="value_changed" from="MarginContainer/HBoxContainer/VBoxContainer/master_slider" to="." method="_on_master_slider_value_changed"]
 [connection signal="value_changed" from="MarginContainer/HBoxContainer/VBoxContainer/music_slider" to="." method="_on_music_slider_value_changed"]
