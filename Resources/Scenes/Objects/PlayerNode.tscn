@@ -6,13 +6,25 @@
 
 [node name="Roach PC" parent="." instance=ExtResource("2_8ujap")]
 
+[node name="Head" parent="Roach PC/Skeleton2D/Torso" index="0"]
+scale = Vector2(1, 1)
+
 [node name="LegB1P1" parent="Roach PC/Skeleton2D/Torso" index="1"]
 scale = Vector2(0.999999, 0.999999)
 
-[node name="LegB2P3" parent="Roach PC/Skeleton2D/Torso/LegB2P1/LegB2P2" index="0"]
-scale = Vector2(1, 1)
+[node name="LegF1P3" parent="Roach PC/Skeleton2D/Torso/LegF1P2/LegF1P2" index="0"]
+scale = Vector2(0.999999, 0.999999)
 
 [node name="LegF2P2" parent="Roach PC/Skeleton2D/Torso/LegF2P2" index="0"]
+scale = Vector2(1, 1)
+
+[node name="ArmBP2" parent="Roach PC/Skeleton2D/Torso/ArmBP1" index="0"]
+scale = Vector2(1, 1)
+
+[node name="ArmFP2" parent="Roach PC/Skeleton2D/Torso" index="6"]
+scale = Vector2(0.999999, 0.999999)
+
+[node name="ArmFP2" parent="Roach PC/Skeleton2D/Torso/ArmFP2" index="0"]
 scale = Vector2(1, 1)
 
 [node name="CollisionPolygon2D" parent="Roach PC" index="2"]

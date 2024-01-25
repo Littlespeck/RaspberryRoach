@@ -2,19 +2,20 @@ extends Node2D
 
 signal game_finished(result)
 
-@export var platform_scene: PackedScene
+@export var bacon_platform: PackedScene
+@export var lettuce_platform: PackedScene
 
 var jump_mode = false
 var player_character
 var screen_size = 2080.0
 var camera_altitude = screen_size / 3.0
 var camera_offset = 0
-var platform_spread = 400
+var platform_spread = 80
 
 func _ready():
 	var new_map = load("res://Resources/Scenes/Maps/map_1.tscn").instantiate()
 	add_child(new_map)
-	var start_platform = load("res://Resources/Scenes/Objects/bacon_platform.tscn").instantiate()
+	var start_platform = lettuce_platform.instantiate()
 	start_platform.position = Vector2(360, 1000)
 	add_child(start_platform)
 	player_character = load("res://Resources/Scenes/Objects/PlayerSprite.tscn").instantiate()
@@ -39,7 +40,7 @@ func _physics_process(_delta):
 		spawn_platform()
 
 func spawn_platform():
-	var platform = platform_scene.instantiate()
+	var platform = select_platform().instantiate()
 	
 	var platform_spawn_location = get_node("PlatformPath/PlatformSpawnLocation")
 	platform_spawn_location.progress_ratio = randf()
@@ -49,5 +50,12 @@ func spawn_platform():
 	platform.scale.x = .5
 	
 	add_child(platform)
-	get_node("PlatformPath").position.y -= platform_spread
-	platform_spread += 5
+	get_node("PlatformPath").position.y -= platform_spread + 20 * randf()
+	platform_spread += 1
+
+func select_platform():
+	var random_number = randi_range(1, 10)
+	if random_number == 1:
+		return bacon_platform
+	else:
+		return lettuce_platform
