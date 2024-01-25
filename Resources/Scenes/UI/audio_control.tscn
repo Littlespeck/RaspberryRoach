@@ -11,32 +11,54 @@ offset_bottom = 1280.0
 size_flags_horizontal = 0
 size_flags_vertical = 0
 script = ExtResource("1_ee7j4")
-master_slider = NodePath("MarginContainer/VBoxContainer/master_options/master_slider")
-music_slider = NodePath("MarginContainer/VBoxContainer/music_options/music_slider")
-sfx_slider = NodePath("MarginContainer/VBoxContainer/sfx_options/sfx_slider")
+master_slider = NodePath("MarginContainer/HBoxContainer/VBoxContainer/master_slider")
+music_slider = NodePath("MarginContainer/HBoxContainer/VBoxContainer/music_slider")
+sfx_slider = NodePath("MarginContainer/HBoxContainer/VBoxContainer/sfx_slider")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 13.0
+offset_top = 14.0
+offset_right = 338.0
+offset_bottom = 112.0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
 layout_mode = 2
 
-[node name="master_options" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
-custom_minimum_size = Vector2(0, 68.28)
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(0, 27.815)
 layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 0
 
-[node name="master_label" type="Label" parent="MarginContainer/VBoxContainer/master_options"]
-custom_minimum_size = Vector2(100, 0)
+[node name="master_label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer2"]
+custom_minimum_size = Vector2(100, 30)
 layout_mode = 2
-text = "            Master             "
+text = "MASTER_AUDIO"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="master_slider" type="HSlider" parent="MarginContainer/VBoxContainer/master_options"]
+[node name="music_label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer2"]
+custom_minimum_size = Vector2(100, 30)
+layout_mode = 2
+text = "MUSIC"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="sfx_label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer2"]
+custom_minimum_size = Vector2(100, 30)
+layout_mode = 2
+text = "SFX"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(0, 7.55)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="master_slider" type="HSlider" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 clip_contents = true
-custom_minimum_size = Vector2(200, 0)
+custom_minimum_size = Vector2(200, 30)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
@@ -46,20 +68,9 @@ value = 1.0
 tick_count = 5
 ticks_on_borders = true
 
-[node name="music_options" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
-custom_minimum_size = Vector2(0, 68.28)
-layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 0
-
-[node name="music_label" type="Label" parent="MarginContainer/VBoxContainer/music_options"]
-custom_minimum_size = Vector2(100, 0)
-layout_mode = 2
-text = "            Music             "
-
-[node name="music_slider" type="HSlider" parent="MarginContainer/VBoxContainer/music_options"]
+[node name="music_slider" type="HSlider" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 clip_contents = true
-custom_minimum_size = Vector2(200, 0)
+custom_minimum_size = Vector2(200, 30)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
@@ -69,20 +80,9 @@ value = 0.8
 tick_count = 5
 ticks_on_borders = true
 
-[node name="sfx_options" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
-custom_minimum_size = Vector2(0, 68.28)
-layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 0
-
-[node name="sfx_label" type="Label" parent="MarginContainer/VBoxContainer/sfx_options"]
-custom_minimum_size = Vector2(100, 0)
-layout_mode = 2
-text = "     Sound Effects      "
-
-[node name="sfx_slider" type="HSlider" parent="MarginContainer/VBoxContainer/sfx_options"]
+[node name="sfx_slider" type="HSlider" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 clip_contents = true
-custom_minimum_size = Vector2(200, 0)
+custom_minimum_size = Vector2(200, 30)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
@@ -97,6 +97,6 @@ stream = ExtResource("2_y17vq")
 autoplay = true
 bus = &"Music"
 
-[connection signal="value_changed" from="MarginContainer/VBoxContainer/master_options/master_slider" to="." method="_on_master_slider_value_changed"]
-[connection signal="value_changed" from="MarginContainer/VBoxContainer/music_options/music_slider" to="." method="_on_music_slider_value_changed"]
-[connection signal="value_changed" from="MarginContainer/VBoxContainer/sfx_options/sfx_slider" to="." method="_on_sfx_slider_value_changed"]
+[connection signal="value_changed" from="MarginContainer/HBoxContainer/VBoxContainer/master_slider" to="." method="_on_master_slider_value_changed"]
+[connection signal="value_changed" from="MarginContainer/HBoxContainer/VBoxContainer/music_slider" to="." method="_on_music_slider_value_changed"]
+[connection signal="value_changed" from="MarginContainer/HBoxContainer/VBoxContainer/sfx_slider" to="." method="_on_sfx_slider_value_changed"]
