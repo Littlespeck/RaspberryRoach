@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://d1u0sfqw5yvss"]
+
+[ext_resource type="Texture2D" uid="uid://cfua4h30v4jvl" path="res://Resources/Artwork/Platforms/PlatformsA/Tomato.PNG" id="1_e3fes"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_epffb"]
+size = Vector2(106, 29)
+
+[node name="TomatoPlatform" type="StaticBody2D"]
+
+[node name="Tomato" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_e3fes")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 5.5)
+shape = SubResource("RectangleShape2D_epffb")
+one_way_collision = true

@@ -2,8 +2,12 @@ extends Node2D
 
 signal game_finished(result)
 
-@export var bacon_platform: PackedScene
-@export var lettuce_platform: PackedScene
+
+const BaconPlatform: PackedScene = preload("res://Resources/Scenes/Objects/Platforms/bacon_platform.tscn")
+const LettucePlatform: PackedScene = preload("res://Resources/Scenes/Objects/Platforms/lettuce_platform.tscn")
+const BagelPlatform: PackedScene = preload("res://Resources/Scenes/Objects/Platforms/bagel_platform.tscn")
+const GurkinPlatform: PackedScene = preload("res://Resources/Scenes/Objects/Platforms/gurkin_platform.tscn")
+const TomatoPlatform: PackedScene = preload("res://Resources/Scenes/Objects/Platforms/tomato_platform.tscn")
 
 var jump_mode = false
 var player_character
@@ -15,7 +19,7 @@ var platform_spread = 80
 func _ready():
 	var new_map = load("res://Resources/Scenes/Maps/map_1.tscn").instantiate()
 	add_child(new_map)
-	var start_platform = lettuce_platform.instantiate()
+	var start_platform = BagelPlatform.instantiate()
 	start_platform.position = Vector2(360, 1000)
 	add_child(start_platform)
 	player_character = load("res://Resources/Scenes/Objects/PlayerSprite.tscn").instantiate()
@@ -48,15 +52,18 @@ func spawn_platform():
 	
 	platform.position = platform_spawn_location.position
 	platform.position.y = get_node("PlatformPath").position.y
-	platform.scale.x = .5
 	
 	add_child(platform)
 	get_node("PlatformPath").position.y -= platform_spread + 20 * randf()
 	platform_spread += 1
 
 func select_platform():
-	var random_number = randi_range(1, 10)
+	var random_number = randi_range(1, 4)
 	if random_number == 1:
-		return bacon_platform
-	else:
-		return lettuce_platform
+		return BaconPlatform
+	elif random_number == 2:
+		return LettucePlatform
+	elif random_number == 3:
+		return GurkinPlatform
+	elif random_number == 4:
+		return TomatoPlatform

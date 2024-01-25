@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://caymhx3xdr61i"]
+
+[ext_resource type="Texture2D" uid="uid://dy4ne1oy1baj5" path="res://Resources/Artwork/Platforms/PlatformsA/Bagel.PNG" id="1_80prn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_11f5j"]
+size = Vector2(722, 128)
+
+[node name="BagelPlatform" type="StaticBody2D"]
+
+[node name="Bagel" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_80prn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 10)
+scale = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_11f5j")
+one_way_collision = true
