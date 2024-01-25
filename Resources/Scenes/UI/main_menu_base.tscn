@@ -1,84 +1,55 @@
-[gd_scene load_steps=5 format=3 uid="uid://d2a6qtqq5nxm2"]
+[gd_scene load_steps=4 format=3 uid="uid://d2a6qtqq5nxm2"]
 
 [ext_resource type="Script" path="res://Resources/Scripts/main_menu_base.gd" id="1_3wa3v"]
-[ext_resource type="Texture2D" uid="uid://bkdcmb5hcui7d" path="res://Resources/Placeholder/CCE_Logo_Placeholder.png" id="1_m3c7e"]
-[ext_resource type="Texture2D" uid="uid://dgkxk2xcu5je7" path="res://Resources/Artwork/Background.bmp" id="2_yl860"]
-[ext_resource type="Theme" uid="uid://uebiqdcelw1p" path="res://Resources/Scenes/UI/BasicTheme.tres" id="4_uguym"]
+[ext_resource type="Theme" uid="uid://uebiqdcelw1p" path="res://Resources/Scenes/UI/BasicTheme.tres" id="1_6pc8w"]
+[ext_resource type="Texture2D" uid="uid://d3scatlwmmwyf" path="res://Resources/Artwork/Title.png" id="3_gjqxy"]
 
 [node name="main_menu_base" type="Control"]
 layout_mode = 3
-anchors_preset = 4
-anchor_top = 0.5
-anchor_bottom = 0.5
-offset_top = -640.0
-offset_right = 720.0
-offset_bottom = 640.0
-grow_vertical = 2
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -360.0
+offset_top = 187.0
+offset_right = 360.0
+offset_bottom = 835.0
+grow_horizontal = 2
+theme = ExtResource("1_6pc8w")
 script = ExtResource("1_3wa3v")
 
-[node name="TextureRect2" type="TextureRect" parent="."]
-layout_mode = 1
-offset_right = 900.0
-offset_bottom = 1600.0
-texture = ExtResource("2_yl860")
-
-[node name="FoodContainer" type="Control" parent="."]
-layout_mode = 1
-anchors_preset = 0
-offset_right = 720.0
-offset_bottom = 1280.0
-
 [node name="ColorRect" type="ColorRect" parent="."]
-layout_mode = 1
-offset_left = -83.0
-offset_top = -45.0
-offset_right = 773.0
-offset_bottom = 640.0
+layout_mode = 0
+offset_right = 720.0
+offset_bottom = 648.0
+color = Color(0, 0, 0, 0.0823529)
 
 [node name="TextureRect" type="TextureRect" parent="."]
-layout_mode = 1
-offset_top = 213.0
+layout_mode = 2
 offset_right = 717.0
-offset_bottom = 522.0
-texture = ExtResource("1_m3c7e")
+offset_bottom = 422.0
+texture = ExtResource("3_gjqxy")
 
 [node name="options_container" type="VBoxContainer" parent="."]
-layout_mode = 1
-anchors_preset = 7
+layout_mode = 2
 anchor_left = 0.5
-anchor_top = 1.0
 anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -214.0
-offset_top = -515.0
-offset_right = 214.0
-offset_bottom = -89.0
-grow_horizontal = 2
-grow_vertical = 0
+offset_left = -300.0
+offset_top = 491.0
+offset_right = 304.0
+offset_bottom = 657.0
 
 [node name="start_game_button" type="Button" parent="options_container"]
 layout_mode = 2
-size_flags_vertical = 3
-theme = ExtResource("4_uguym")
 text = "START"
 
 [node name="options_menu_button" type="Button" parent="options_container"]
 layout_mode = 2
-size_flags_vertical = 3
-theme = ExtResource("4_uguym")
 text = "OPTION"
 
 [node name="quit_game_button" type="Button" parent="options_container"]
 layout_mode = 2
-size_flags_vertical = 3
-theme = ExtResource("4_uguym")
 text = "QUIT"
-
-[node name="FoodSpawnTimer" type="Timer" parent="."]
-wait_time = 0.75
-autostart = true
 
 [connection signal="button_down" from="options_container/start_game_button" to="." method="_on_start_game_button_button_down"]
 [connection signal="button_down" from="options_container/options_menu_button" to="." method="_on_options_menu_button_button_down"]
 [connection signal="button_down" from="options_container/quit_game_button" to="." method="_on_quit_game_button_button_down"]
-[connection signal="timeout" from="FoodSpawnTimer" to="." method="_on_food_spawn_timer_timeout"]
