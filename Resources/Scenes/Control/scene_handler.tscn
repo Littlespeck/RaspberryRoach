@@ -11,6 +11,5 @@ script = ExtResource("1_n1ahp")
 
 [node name="Munch" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_r5d0i")
-bus = &"SFX"
 
 [editable path="main_menu_base"]
