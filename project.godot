@@ -63,6 +63,12 @@ locale/translation_remaps={}
 locale/translations=PackedStringArray("res://translations.de.translation", "res://translations.en.translation", "res://translations.es.translation", "res://translations.fr.translation", "res://translations.pt.translation")
 locale/locale_filter_mode=0
 
+[layer_names]
+
+2d_physics/layer_1="Player"
+2d_physics/layer_2="Platforms"
+2d_physics/layer_3="PowerUps"
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"

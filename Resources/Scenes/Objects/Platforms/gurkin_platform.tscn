@@ -6,6 +6,7 @@
 size = Vector2(224, 24)
 
 [node name="GurkinPlatform" type="StaticBody2D"]
+collision_layer = 2
 
 [node name="Gurkin" type="Sprite2D" parent="."]
 scale = Vector2(0.5, 0.5)

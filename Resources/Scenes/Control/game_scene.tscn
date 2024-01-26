@@ -1,22 +1,20 @@
-[gd_scene load_steps=8 format=3 uid="uid://dq2pr0e1iok7"]
+[gd_scene load_steps=7 format=3 uid="uid://dq2pr0e1iok7"]
 
 [ext_resource type="Script" path="res://Resources/Scripts/game_scene.gd" id="1_x8dkm"]
-[ext_resource type="PackedScene" uid="uid://piq5b0lx27wv" path="res://Resources/Scenes/Objects/Platforms/bacon_platform.tscn" id="2_ppket"]
-[ext_resource type="PackedScene" uid="uid://nmtdxfw8ty3o" path="res://Resources/Scenes/Objects/Platforms/lettuce_platform.tscn" id="3_af5jj"]
 [ext_resource type="Theme" path="res://Resources/Scenes/UI/BasicTheme.tres" id="4_gqrwp"]
 [ext_resource type="Texture2D" uid="uid://bskdfhj8xxdn5" path="res://Resources/GobletSmall.png" id="4_oedde"]
 [ext_resource type="AudioStream" uid="uid://dch577rbgxgk0" path="res://Resources/Sounds/Retro Polka.ogg" id="4_p4u82"]
 
 [sub_resource type="Curve2D" id="Curve2D_miy5y"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 114, 658, 0, 0, 0, 0, 651, 658)
+"points": PackedVector2Array(0, 0, 0, 0, 100, 1, 0, 0, 0, 0, 628, 1)
 }
 point_count = 2
 
+[sub_resource type="Curve2D" id="Curve2D_8vhxs"]
+
 [node name="GameScene" type="Node2D"]
 script = ExtResource("1_x8dkm")
-bacon_platform = ExtResource("2_ppket")
-lettuce_platform = ExtResource("3_af5jj")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -54,11 +52,11 @@ position = Vector2(360, 639)
 position_smoothing_enabled = true
 
 [node name="PlatformPath" type="Path2D" parent="."]
-position = Vector2(-22, 885)
+position = Vector2(0, 885)
 curve = SubResource("Curve2D_miy5y")
 
 [node name="PlatformSpawnLocation" type="PathFollow2D" parent="PlatformPath"]
-position = Vector2(114, 658)
+position = Vector2(100, 1)
 
 [node name="BGM" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_p4u82")
@@ -66,3 +64,8 @@ volume_db = -5.0
 autoplay = true
 
 [node name="PlatformContainer" type="Node2D" parent="."]
+
+[node name="PowerUpPath" type="Path2D" parent="."]
+curve = SubResource("Curve2D_8vhxs")
+
+[node name="PowerUpSpawnLocation" type="PathFollow2D" parent="PowerUpPath"]

@@ -6,6 +6,7 @@
 size = Vector2(106, 29)
 
 [node name="TomatoPlatform" type="StaticBody2D"]
+collision_layer = 2
 
 [node name="Tomato" type="Sprite2D" parent="."]
 scale = Vector2(0.5, 0.5)

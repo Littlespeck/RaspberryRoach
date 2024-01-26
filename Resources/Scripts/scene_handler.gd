@@ -8,8 +8,6 @@ var score_table = []
 @onready var options_menu = preload("res://Resources/Scenes/UI/options_base.tscn").instantiate()
 
 func _ready():
-	for i in Globals.high_score_table:
-		score_table.append(Globals.high_score_table[i])
 	#load_options_menu()
 	load_main_menu()
 
@@ -38,10 +36,6 @@ func on_quit_game_pressed():
 func unload_game(score):
 	get_node("GameScene").queue_free()
 	$Munch.play()
-	score_table.append(score)
-	score_table.sort_custom(descending_sort)
-	score_table.remove_at(3)
-	print(score_table)
 	
 	
 	var game_over_scene = load("res://Resources/Scenes/UI/GameOverScene.tscn").instantiate()

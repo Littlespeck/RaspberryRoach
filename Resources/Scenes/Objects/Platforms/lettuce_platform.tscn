@@ -6,6 +6,7 @@
 size = Vector2(379, 14)
 
 [node name="LettucePlatform" type="StaticBody2D"]
+collision_layer = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.5, 0.5)

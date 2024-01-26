@@ -1949,6 +1949,7 @@ _data = {
 
 [node name="Roach PC" type="CharacterBody2D"]
 position = Vector2(9, 4)
+collision_mask = 6
 script = ExtResource("1_em2f5")
 
 [node name="polygons" type="Node2D" parent="."]
