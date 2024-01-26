@@ -1,0 +1,40 @@
+[gd_scene load_steps=3 format=3 uid="uid://dbnehr0w1bbt7"]
+
+[ext_resource type="Texture2D" uid="uid://dyx21p64acpik" path="res://Resources/Artwork/Particle.png" id="1_pn0ib"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_82lgm"]
+particle_flag_align_y = true
+particle_flag_rotate_y = true
+particle_flag_disable_z = true
+angle_min = -258.1
+angle_max = 665.6
+inherit_velocity_ratio = 0.39
+velocity_pivot = Vector3(1.47, 1.545, 0)
+direction = Vector3(1.335, 0.91, 0)
+spread = 39.808
+flatness = 0.12
+angular_velocity_min = 0.8
+angular_velocity_max = 6.3
+orbit_velocity_min = 0.699
+orbit_velocity_max = 2.253
+radial_velocity_max = 16.84
+gravity = Vector3(0.105, 0.085, 0)
+radial_accel_min = 9.74
+radial_accel_max = 33.01
+tangential_accel_min = 54.72
+tangential_accel_max = 77.36
+scale_min = 0.2
+scale_max = 1.7
+color = Color(0.796078, 0.686275, 0.815686, 1)
+turbulence_enabled = true
+turbulence_noise_strength = 4.12
+turbulence_noise_scale = 4.826
+
+[node name="GPUParticles2D" type="GPUParticles2D"]
+amount = 5
+process_material = SubResource("ParticleProcessMaterial_82lgm")
+texture = ExtResource("1_pn0ib")
+lifetime = 1.05
+explosiveness = 0.1
+randomness = 0.3
+collision_base_size = 0.0
