@@ -22,6 +22,12 @@ offset_right = 900.0
 offset_bottom = 648.0
 color = Color(0, 0, 0, 0.0823529)
 
+[node name="FoodContainer" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 217.0
+offset_right = 257.0
+offset_bottom = 40.0
+
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 2
 anchor_left = 0.502
@@ -55,3 +61,5 @@ text = "Quit
 "
 
 [node name="FoodSpawnTimer" type="Timer" parent="."]
+wait_time = 0.75
+autostart = true

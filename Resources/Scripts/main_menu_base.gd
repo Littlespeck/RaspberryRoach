@@ -19,7 +19,6 @@ func ChooseFruit():
 	var randNum = randi_range(1,9)
 	var randNumPOS = randi_range(50, 650)
 	var Instance
-	var LastInstance
 
 	match randNum:
 		1:
@@ -42,7 +41,6 @@ func ChooseFruit():
 			Instance = BERRY.instantiate()
 	$FoodContainer.add_child(Instance)
 	Instance.position = Vector2i(randNumPOS,-25)
-	LastInstance = Instance
 	randomize()
 
 func _on_food_spawn_timer_timeout():
