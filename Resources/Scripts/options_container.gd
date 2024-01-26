@@ -3,19 +3,28 @@ class_name  OptionsContainer extends PanelContainer
 @onready var user_prefs : UserPreferences
 signal _change_setting(setting, value)
 
-@export var audio_control_node : Node
-@export var audio_control : AudioControl
-@export var video_control_node : Node
-@export var video_control : VideoControl
-@export var language_control_node : Node
-@export var language_control : LanguageControl
-@export var keybind_control_node : Node
-@export var reset_control_node : Node
+@onready var audio_control_node : Node
+@onready var audio_control : AudioControl
+@onready var video_control_node : Node
+@onready var video_control : VideoControl
+@onready var language_control_node : Node
+@onready var language_control : LanguageControl
+@onready var keybind_control_node : Node
+@onready var reset_control_node : Node
 
 var last_pressed : int
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	audio_control_node = get_node("audio_control")
+	audio_control = audio_control_node as AudioControl
+	video_control_node = get_node("video_control")
+	video_control = video_control_node as VideoControl
+	language_control_node = get_node("language_control")
+	language_control = language_control_node as LanguageControl
+	keybind_control_node = get_node("keybind_control")
+	reset_control_node = get_node("/root/options_base/save_container")
+	#keybind_control = keybind_control_node as KeybindControl
 	_hide_all_options()
 	audio_control.connect("_change_setting", on_setting_changed)
 	video_control.connect("_change_setting", on_setting_changed)
