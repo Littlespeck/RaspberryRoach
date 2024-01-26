@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Resources/Scripts/scene_handler.gd" id="1_n1ahp"]
 [ext_resource type="PackedScene" uid="uid://d2a6qtqq5nxm2" path="res://Resources/Scenes/UI/main_menu_base.tscn" id="2_cwuy5"]
-[ext_resource type="Theme" path="res://Resources/Scenes/UI/BasicTheme.tres" id="3_4ibnt"]
+[ext_resource type="Theme" uid="uid://uebiqdcelw1p" path="res://Resources/Scenes/UI/BasicTheme.tres" id="3_4ibnt"]
 [ext_resource type="AudioStream" uid="uid://cm331qdt8stl" path="res://Resources/Sounds/Munch.wav" id="3_r5d0i"]
 
 [node name="SceneHandler" type="Node"]
