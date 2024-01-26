@@ -1,9 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://byifeyemr50r7"]
+[gd_scene load_steps=4 format=3 uid="uid://byifeyemr50r7"]
 
 [ext_resource type="Texture2D" uid="uid://dgkxk2xcu5je7" path="res://Resources/Artwork/Background.bmp" id="1_i02xr"]
 [ext_resource type="Theme" uid="uid://uebiqdcelw1p" path="res://Resources/Localization/Theme/BasicTheme.tres" id="1_v0dna"]
 [ext_resource type="Theme" uid="uid://dfmftmyq25pj4" path="res://Resources/Placeholder/UI_Theme.tres" id="3_d7t21"]
-[ext_resource type="Texture2D" uid="uid://bskdfhj8xxdn5" path="res://Resources/Artwork/GobletSmall.png" id="3_qa2ub"]
 
 [node name="GameOverScene" type="Control"]
 layout_mode = 3
@@ -69,7 +68,6 @@ offset_left = -68.0
 offset_right = 60.0
 offset_bottom = 128.0
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("3_qa2ub")
 
 [node name="ScoreLabel" type="Label" parent="Control"]
 layout_mode = 1
