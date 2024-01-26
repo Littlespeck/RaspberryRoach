@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://byifeyemr50r7"]
+[gd_scene load_steps=5 format=3 uid="uid://byifeyemr50r7"]
 
 [ext_resource type="Texture2D" uid="uid://dgkxk2xcu5je7" path="res://Resources/Artwork/Background.bmp" id="1_i02xr"]
-[ext_resource type="Theme" path="res://Resources/Scenes/UI/BasicTheme.tres" id="1_v0dna"]
+[ext_resource type="Theme" uid="uid://uebiqdcelw1p" path="res://Resources/Scenes/UI/BasicTheme.tres" id="1_v0dna"]
 [ext_resource type="Theme" uid="uid://dfmftmyq25pj4" path="res://Resources/Placeholder/UI_Theme.tres" id="3_d7t21"]
+[ext_resource type="Texture2D" uid="uid://bskdfhj8xxdn5" path="res://Resources/GobletSmall.png" id="3_qa2ub"]
 
 [node name="GameOverScene" type="Control"]
 layout_mode = 3
@@ -32,9 +33,9 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -216.5
-offset_top = -536.0
+offset_top = -770.0
 offset_right = 216.5
-offset_bottom = -108.0
+offset_bottom = -342.0
 grow_horizontal = 2
 grow_vertical = 0
 
@@ -53,19 +54,36 @@ size_flags_vertical = 3
 theme = ExtResource("1_v0dna")
 text = "Main Menu"
 
-[node name="ScoreLabel" type="Label" parent="."]
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 318.0
+offset_top = 362.0
+offset_right = 358.0
+offset_bottom = 402.0
+
+[node name="TextureRect" type="TextureRect" parent="Control"]
+clip_contents = true
+layout_mode = 2
+offset_left = -68.0
+offset_right = 60.0
+offset_bottom = 128.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_qa2ub")
+
+[node name="ScoreLabel" type="Label" parent="Control"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -11.5
-offset_right = 20.0
-offset_bottom = 11.5
+offset_top = -31.0
+offset_right = 234.0
+offset_bottom = 57.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("3_d7t21")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 64
+vertical_alignment = 1

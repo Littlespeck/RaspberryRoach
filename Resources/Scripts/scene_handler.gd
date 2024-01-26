@@ -37,7 +37,7 @@ func unload_game(score):
 	
 	
 	var game_over_scene = load("res://Resources/Scenes/UI/GameOverScene.tscn").instantiate()
-	game_over_scene.get_node("ScoreLabel").text = str(score)
+	game_over_scene.get_node("Control").get_node("ScoreLabel").text = str(score)
 	
 	add_child(game_over_scene)
 	
