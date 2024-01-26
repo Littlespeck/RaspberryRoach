@@ -14,6 +14,7 @@ var CCKnife_offset = 600
 var powerup_spread = 2000
 
 var score = 0
+var Pup_Points = 0
 
 const BaconPlatform: PackedScene = preload("res://Resources/Scenes/Objects/Platforms/bacon_platform.tscn")
 const LettucePlatform: PackedScene = preload("res://Resources/Scenes/Objects/Platforms/lettuce_platform.tscn")
@@ -124,8 +125,8 @@ func select_platform():
 			return TomatoPlatform
 
 func UpdateScore():
-	if get_node("Roach PC").position.y < 0 and -get_node("Roach PC").position.y > score:
-		score = snapped(-get_node("Roach PC").position.y, 0)
+	if get_node("Roach PC").position.y < 0 and -get_node("Roach PC").position.y + Pup_Points > score:
+		score = snapped(-get_node("Roach PC").position.y, 0) + Pup_Points
 		get_node("CanvasLayer/Control/ScoreLabel").text = str(score)
 
 
