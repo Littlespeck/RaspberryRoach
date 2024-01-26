@@ -3,8 +3,6 @@ extends Node2D
 signal game_finished(result)
 signal PlayerDied
 
-@export var JumpScore = 50
-
 var jump_mode = false
 var player_character
 var screen_size = 2080.0
@@ -15,7 +13,7 @@ var CCKnife_offset = 600
 @export var platform_spread = 80
 var powerup_spread = 2000
 
-var score: int
+var score = 0
 
 const BaconPlatform: PackedScene = preload("res://Resources/Scenes/Objects/Platforms/bacon_platform.tscn")
 const LettucePlatform: PackedScene = preload("res://Resources/Scenes/Objects/Platforms/lettuce_platform.tscn")
@@ -47,8 +45,6 @@ func _ready():
 	
 	get_node("Camera2D").position.y = camera_altitude
 	
-	player_character.connect("HasJumped", IncreaseScore)
-	
 	get_node("CCKnife").connect("PlayerDied", GameFinished)
 	
 	spawn_platform()
@@ -66,7 +62,10 @@ func _process(_delta):
 			print(score)
 
 func _physics_process(delta):
-	get_node("CCKnife").position.y -= 100 * delta 
+	if get_node("CCKnife").position.y - get_node("Roach PC").position.y < 1000:
+		get_node("CCKnife").position.y -= 100 * delta 
+	else:
+		get_node("CCKnife").position.y -= 500 * delta
 	if get_node("Camera2D").position.y + 1000 > get_node("PlatformPath").position.y:
 		spawn_platform()
 		get_node("PlatformPath").position.y -= platform_spread + 20 * randf()
@@ -125,10 +124,10 @@ func select_platform():
 			return TomatoPlatform
 
 func UpdateScore():
-	$CanvasLayer/Control/ScoreLabel.text = str(score)
+	if get_node("Roach PC").position.y < 0 and -get_node("Roach PC").position.y > score:
+		score = snapped(-get_node("Roach PC").position.y, 0)
+		get_node("CanvasLayer/Control/ScoreLabel").text = str(score)
 
-func  IncreaseScore():
-	score += JumpScore
 
 func GameFinished(finalscore):
 	emit_signal("game_finished", finalscore)

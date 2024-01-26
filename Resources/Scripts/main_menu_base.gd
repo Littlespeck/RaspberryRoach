@@ -16,7 +16,7 @@ func _ready():
 	randomize()
 
 func ChooseFruit():
-	var randNum = randi_range(1,9)
+	var randNum = randi_range(1,5)
 	var randNumPOS = randi_range(50, 650)
 	var Instance
 
@@ -28,17 +28,9 @@ func ChooseFruit():
 		3:
 			Instance = MANDARIN.instantiate()
 		4:
-			Instance = GUMMY.instantiate()
-		5:
-			Instance = CHOCOLATE.instantiate()
-		6:
 			Instance = CARROT.instantiate()
-		7:
-			Instance = CANDY.instantiate()
-		8:
+		5:
 			Instance = BROKKOLI.instantiate()
-		9:
-			Instance = BERRY.instantiate()
 	$FoodContainer.add_child(Instance)
 	Instance.position = Vector2i(randNumPOS,-25)
 	randomize()

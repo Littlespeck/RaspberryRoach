@@ -2,5 +2,5 @@ extends Area2D
 
 
 func _on_body_entered(body):
-	body.velocity.y -= 1000
+	body.velocity.y -= 1200
 	queue_free()

@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://d2a6qtqq5nxm2"]
+[gd_scene load_steps=4 format=3 uid="uid://d2a6qtqq5nxm2"]
 
 [ext_resource type="Script" path="res://Resources/Scripts/main_menu_base.gd" id="1_3wa3v"]
 [ext_resource type="Texture2D" uid="uid://d3scatlwmmwyf" path="res://Resources/Artwork/Title.png" id="2_rpp3w"]
+[ext_resource type="Texture2D" uid="uid://dgkxk2xcu5je7" path="res://Resources/Artwork/Background.bmp" id="2_vs4my"]
 
 [node name="main_menu_base" type="Control"]
 layout_mode = 3
@@ -14,6 +15,10 @@ offset_bottom = 648.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_3wa3v")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(568, 647)
+texture = ExtResource("2_vs4my")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 0
@@ -32,10 +37,13 @@ offset_bottom = 40.0
 layout_mode = 2
 anchor_left = 0.502
 anchor_right = 0.502
-offset_left = -302.304
-offset_top = 43.0
-offset_right = 301.696
-offset_bottom = 293.0
+offset_left = -282.304
+offset_top = 26.0
+offset_right = 417.696
+offset_bottom = 438.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.8, 0.8)
 texture = ExtResource("2_rpp3w")
 
 [node name="options_container" type="VBoxContainer" parent="."]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://dbnehr0w1bbt7"]
+[gd_scene load_steps=3 format=3 uid="uid://cofqagdiol8pi"]
 
 [ext_resource type="Texture2D" uid="uid://dyx21p64acpik" path="res://Resources/Artwork/Particle.png" id="1_pn0ib"]
 
@@ -23,8 +23,8 @@ radial_accel_min = 9.74
 radial_accel_max = 33.01
 tangential_accel_min = 54.72
 tangential_accel_max = 77.36
-scale_min = 0.2
-scale_max = 1.7
+scale_min = 0.0
+scale_max = 35.92
 color = Color(0.796078, 0.686275, 0.815686, 1)
 turbulence_enabled = true
 turbulence_noise_strength = 4.12

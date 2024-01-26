@@ -1,13 +1,16 @@
-[gd_scene load_steps=4 format=3 uid="uid://d0eektf882boe"]
+[gd_scene load_steps=5 format=3 uid="uid://d0eektf882boe"]
 
 [ext_resource type="Script" path="res://Resources/Scripts/gummy.gd" id="1_i8yb2"]
 [ext_resource type="Texture2D" uid="uid://xywnxuqpv5pq" path="res://Resources/Artwork/Gummy.PNG" id="1_iqn32"]
+[ext_resource type="PackedScene" uid="uid://cofqagdiol8pi" path="res://Upgrade Particles.tscn" id="3_ad13p"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nhpa2"]
 size = Vector2(72, 125)
 
 [node name="Area2D" type="Area2D"]
 script = ExtResource("1_i8yb2")
+
+[node name="GPUParticles2D" parent="." instance=ExtResource("3_ad13p")]
 
 [node name="Gummy" type="Sprite2D" parent="."]
 texture = ExtResource("1_iqn32")

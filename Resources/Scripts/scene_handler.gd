@@ -2,8 +2,6 @@ extends Node
 
 signal toggle_options
 
-var score_table = []
-
 @export var control_root : Node
 @onready var options_menu = preload("res://Resources/Scenes/UI/options_base.tscn").instantiate()
 
@@ -39,7 +37,7 @@ func unload_game(score):
 	
 	
 	var game_over_scene = load("res://Resources/Scenes/UI/GameOverScene.tscn").instantiate()
-	game_over_scene.get_node("ScoreLabel").text = "Score: " + str(score)
+	game_over_scene.get_node("ScoreLabel").text = str(score)
 	
 	add_child(game_over_scene)
 	
@@ -62,8 +60,4 @@ func on_play_again_button_pressed():
 
 func on_options_menu_pressed():
 	emit_signal("toggle_options")
-	
-func descending_sort(a, b):
-	if a >= b:
-		return true
-	return false
+
