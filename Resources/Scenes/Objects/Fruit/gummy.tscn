@@ -1,9 +1,19 @@
-[gd_scene load_steps=3 format=3 uid="uid://d0eektf882boe"]
+[gd_scene load_steps=4 format=3 uid="uid://d0eektf882boe"]
 
+[ext_resource type="Script" path="res://Resources/Scripts/gummy.gd" id="1_i8yb2"]
 [ext_resource type="Texture2D" uid="uid://xywnxuqpv5pq" path="res://Resources/Artwork/Gummy.PNG" id="1_iqn32"]
-[ext_resource type="Script" path="res://Resources/Scripts/FoodMovement.gd" id="2_vfjdp"]
 
-[node name="Gummy" type="Sprite2D"]
-position = Vector2(501, 1325)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nhpa2"]
+size = Vector2(72, 125)
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource("1_i8yb2")
+
+[node name="Gummy" type="Sprite2D" parent="."]
 texture = ExtResource("1_iqn32")
-script = ExtResource("2_vfjdp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_nhpa2")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -13,6 +13,7 @@ var camera_offset = 0
 var CCKnife_altitude = screen_size / 5
 var CCKnife_offset = 600
 var platform_spread = 80
+var powerup_spread = 2000
 
 var score: int
 
@@ -21,6 +22,10 @@ const LettucePlatform: PackedScene = preload("res://Resources/Scenes/Objects/Pla
 const BagelPlatform: PackedScene = preload("res://Resources/Scenes/Objects/Platforms/bagel_platform.tscn")
 const GurkinPlatform: PackedScene = preload("res://Resources/Scenes/Objects/Platforms/gurkin_platform.tscn")
 const TomatoPlatform: PackedScene = preload("res://Resources/Scenes/Objects/Platforms/tomato_platform.tscn")
+
+const Berry: PackedScene = preload("res://Resources/Scenes/Objects/Fruit/berry.tscn")
+const Candy: PackedScene = preload("res://Resources/Scenes/Objects/Fruit/candy.tscn")
+const Gummy: PackedScene = preload("res://Resources/Scenes/Objects/Fruit/gummy.tscn")
 
 func _ready():
 	var new_map = load("res://Resources/Scenes/Maps/map_1.tscn").instantiate()
@@ -64,6 +69,12 @@ func _physics_process(delta):
 	get_node("CCKnife").position.y -= 100 * delta 
 	if get_node("Camera2D").position.y + 1000 > get_node("PlatformPath").position.y:
 		spawn_platform()
+		get_node("PlatformPath").position.y -= platform_spread + 20 * randf()
+		platform_spread += 1
+	if get_node("Camera2D").position.y + 3000 > get_node("PowerUpPath").position.y:
+		var coin = randi_range(0,1)
+		if coin == 0:
+			spawn_powerup()
 	UpdateScore()
 
 func spawn_platform():
@@ -77,19 +88,41 @@ func spawn_platform():
 	platform.scale.x = .7
 	
 	$PlatformContainer.add_child(platform)
-	get_node("PlatformPath").position.y -= platform_spread + 20 * randf()
-	platform_spread += 1
+	
+func spawn_powerup():
+	var powerup = select_powerup().instantiate()
+	
+	var platform_spawn_location = get_node("PowerUpPath/PowerUpSpawnLocation")
+	platform_spawn_location.progress_ratio = randf()
+	
+	powerup.position = platform_spawn_location.position
+	powerup.position.y = get_node("PowerUpPath").position.y
+	powerup.scale.x = .7
+	
+	$PlatformContainer.add_child(powerup)
+	get_node("PowerUpPath").position.y -= powerup_spread + 20 * randf()
+	
+func select_powerup():
+	var random_number = randi_range(1, 3)
+	match random_number:
+		1:
+			return Berry
+		2:
+			return Candy
+		3:
+			return Gummy
 
 func select_platform():
 	var random_number = randi_range(1, 4)
-	if random_number == 1:
-		return BaconPlatform
-	elif random_number == 2:
-		return LettucePlatform
-	elif random_number == 3:
-		return GurkinPlatform
-	elif random_number == 4:
-		return TomatoPlatform
+	match random_number:
+		1:
+			return BaconPlatform
+		2:
+			return LettucePlatform
+		3:
+			return GurkinPlatform
+		4:
+			return TomatoPlatform
 
 func UpdateScore():
 	$CanvasLayer/Control/ScoreLabel.text = str(score)
