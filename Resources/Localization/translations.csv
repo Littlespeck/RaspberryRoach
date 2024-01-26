@@ -1,9 +1,9 @@
 keys,en,es,de,fr,pt
-START,Start Game,Empezar juego,Spiel beginnen,Démarrer jeu,Começar o jogo
+START,Start Game,Empezar juego,Spiel Starten,Démarrer jeu,Começar o jogo
 OPTION,Options,Opciones,Optionen,Possibilités,Opções
-QUIT,Quit,Abandonar,Aufhören,Quitter,Desistir
+QUIT,Quit,Abandonar,Beenden,Quitter,Desistir
 LANUGAGE,Language,Idioma,Sprache,Langue,Linguagem
-KEYBIND,Keybind,Combinación de teclas,Tastenkombination,Affectation de touches,Teclado
+KEYBIND,Keybind,Combinación de teclas,Tastenbelegung,Affectation de touches,Teclado
 VIDEO,Video,Video,Video,Vidéo,Vídeo
 AUDIO,Audio,Audio,Audio,l'audio,Áudio
 SAVE,Save,Ahorrar,Speichern,Sauvegarder,Salvar
@@ -11,16 +11,14 @@ BACK,Back,Atrás,Zurück,Dos,Voltar
 MASTER_AUDIO,Master,Audio maestro,Master-Audio,Audio principal,Áudio mestre
 MUSIC,Music,Música,Musik,Musique,Música
 SFX,Sound Effects,Efectos de sonido,Soundeffekte,Effets sonores,Efeitos sonoros
-FULLSCREEN,Fullscreen,Pantalla completa,Ganzer Bildschirm,Plein écran,Tela cheia
+FULLSCREEN,Fullscreen,Pantalla completa,Vollerbild,Plein écran,Tela cheia
 EXC_FULLSCREEN,Exclusive Fullscreen,Pantalla completa exclusiva,Exklusiver Vollbildmodus,Plein écran exclusif,Tela cheia exclusiva
-WINDOWED,Windowed,modo ventana,Mit Fenster,Fenêtré,Janela
+WINDOWED,Windowed,modo ventana,Fenstermodus,Fenêtré,Janela
 MAX_FRAMERATE,Max Framerate,límite de velocidad de fotogramas,Bildratenbegrenzung,limite de fréquence d'images,limite de taxa de quadros
-YES,Yes,Sí,Ja,Oui,Sim
-NO,No,No,,,
 DYSLEXIA_CHECK,Use dyslexic friendly font?,¿Usar una fuente amigable para disléxicos?,Legasthenikerfreundliche Schriftart verwenden?,Utiliser une police adaptée aux dyslexiques ?,Utiliser une police adaptée aux dyslexiques ?
-SAVE_CONFIRM,"You have unsaved changes, would you like to save?",Sie haben noch nicht gespeicherte Änderungen. Möchten Sie diese speichern?,Sie haben noch nicht gespeicherte Änderungen. Möchten Sie diese speichern?,"Vous avez des modifications non enregistrées, souhaitez-vous les enregistrer ?","Você tem alterações não salvas, gostaria de salvar?"
-RESTART,Play Again,Juega de nuevo,Nochmal abspielen,Rejouer,Jogar de novo
-MAIN_MENU,Main Menu,Hauptmenü,Hauptmenü,Menu principal,Menu principal
+SAVE_CONFIRM,"You have unsaved changes, would you like to save?","Tienes cambios sin guardar, ¿te gustaría guardarlos?",Sie haben noch nicht gespeicherte Änderungen. Möchten Sie diese speichern?,"Vous avez des modifications non enregistrées, souhaitez-vous les enregistrer ?","Você tem alterações não salvas, gostaria de salvar?"
+RESTART,Play Again,Juega de nuevo,Nochmal spielen,Rejouer,Jogar de novo
+MAIN_MENU,Main Menu,Menú principal,Hauptmenü,Menu principal,Menu principal
 JUMP,Jump,Saltar,Springen,Saut,Pular
 MOVE_LEFT,Move Left,Izquierdo,Links,Gauche,Esquerdo
 MOVE_RIGHT,Move Right,Derecho,Rechts,Droit,Certo

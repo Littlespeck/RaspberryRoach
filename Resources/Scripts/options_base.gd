@@ -21,10 +21,15 @@ func _ready():
 func save_prefs():
 	user_prefs.save()
 	isDirty = false
+	Globals._intialize_user_prefs.emit()
+	
+func _on_save_button_pressed():
+	save_prefs()
 	if popup_menu.is_visible_in_tree():
 		popup_menu.hide()
 		buttons_container._enable_buttons()
 		options_container._show_last_selected()
+	_on_toggle_options()
 
 func _on_back_button_pressed():
 	if isDirty:

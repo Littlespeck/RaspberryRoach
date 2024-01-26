@@ -10,13 +10,13 @@ script = ExtResource("1_n1ahp")
 
 [node name="main_menu_base" parent="." instance=ExtResource("2_cwuy5")]
 
-[node name="start_game_button" parent="main_menu_base/options_container" index="0"]
+[node name="start_game_button" parent="main_menu_base/options_container" index="1"]
 theme = ExtResource("3_4ibnt")
 
-[node name="options_menu_button" parent="main_menu_base/options_container" index="1"]
+[node name="options_menu_button" parent="main_menu_base/options_container" index="2"]
 theme = ExtResource("3_4ibnt")
 
-[node name="quit_game_button" parent="main_menu_base/options_container" index="2"]
+[node name="quit_game_button" parent="main_menu_base/options_container" index="3"]
 theme = ExtResource("3_4ibnt")
 
 [node name="Munch" type="AudioStreamPlayer" parent="."]
