@@ -67,11 +67,11 @@ func _physics_process(delta):
 		get_node("CCKnife").position.y -= 100 * delta 
 	else:
 		get_node("CCKnife").position.y -= 500 * delta
-	if get_node("Camera2D").position.y + 1000 > get_node("PlatformPath").position.y:
+	if get_node("Camera2D").position.y < get_node("PlatformPath").position.y + 1000:
 		spawn_platform()
 		get_node("PlatformPath").position.y -= platform_spread + 20 * randf()
 		platform_spread += 1
-	if get_node("Camera2D").position.y + 3000 > get_node("PowerUpPath").position.y:
+	if get_node("Camera2D").position.y < get_node("PowerUpPath").position.y + 3000:
 		var coin = randi_range(0,1)
 		if coin == 0:
 			spawn_powerup()
@@ -125,7 +125,7 @@ func select_platform():
 			return TomatoPlatform
 
 func UpdateScore():
-	if get_node("Roach PC").position.y < 0 and -get_node("Roach PC").position.y + Pup_Points > score:
+	if get_node("Roach PC").position.y < 0 and -get_node("Roach PC").position.y +Pup_Points > score:
 		score = snapped(-get_node("Roach PC").position.y, 0) + Pup_Points
 		get_node("CanvasLayer/Control/ScoreLabel").text = str(score)
 
