@@ -17,7 +17,7 @@ func _ready():
 
 func ChooseFruit():
 	var randNum = randi_range(1,5)
-	var randNumPOS = randi_range(50, 650)
+	var randNumPOS = randi_range(-100, 450)
 	var Instance
 
 	match randNum:
