@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bskdfhj8xxdn5"
-path="res://.godot/imported/GobletSmall.png-2a2f8a6bb2168b8ab7e5c354235e486c.ctex"
+path="res://.godot/imported/GobletSmall.png-a38ceed2b1e9e63a225beebca2186f33.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Resources/GobletSmall.png"
-dest_files=["res://.godot/imported/GobletSmall.png-2a2f8a6bb2168b8ab7e5c354235e486c.ctex"]
+source_file="res://Resources/Artwork/GobletSmall.png"
+dest_files=["res://.godot/imported/GobletSmall.png-a38ceed2b1e9e63a225beebca2186f33.ctex"]
 
 [params]
 

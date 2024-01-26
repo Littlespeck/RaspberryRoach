@@ -38,7 +38,7 @@ func _ready():
 	player_character.scale = Vector2(.20, .20)
 	add_child(player_character)
 	
-	var CCKnife = load("res://cc_knife.tscn").instantiate()
+	var CCKnife = load("res://Resources/Scenes/Objects/cc_knife.tscn").instantiate()
 	add_child(CCKnife)
 	CCKnife.position = Vector2(360, 2000)
 	CCKnife.scale = Vector2(.55, .55)

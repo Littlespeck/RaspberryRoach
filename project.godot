@@ -60,7 +60,7 @@ Move_Right={
 [internationalization]
 
 locale/translation_remaps={}
-locale/translations=PackedStringArray("res://translations.de.translation", "res://translations.en.translation", "res://translations.es.translation", "res://translations.fr.translation", "res://translations.pt.translation")
+locale/translations=PackedStringArray("res://Resources/Localization/translations.pt.translation", "res://Resources/Localization/translations.de.translation", "res://Resources/Localization/translations.en.translation", "res://Resources/Localization/translations.es.translation", "res://Resources/Localization/translations.fr.translation")
 locale/locale_filter_mode=0
 
 [layer_names]

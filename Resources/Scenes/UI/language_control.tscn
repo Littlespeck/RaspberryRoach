@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dou4xu1tk0vbu"]
 
-[ext_resource type="Script" path="res://Resources/Scenes/UI/language_control.gd" id="1_2vqds"]
+[ext_resource type="Script" path="res://Resources/Scripts/language_control.gd" id="1_2vqds"]
 
 [node name="language_control" type="Control" node_paths=PackedStringArray("language_button", "font_button")]
 layout_mode = 3

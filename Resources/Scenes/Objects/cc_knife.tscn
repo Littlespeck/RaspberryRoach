@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://d33ltltwcvhgy"]
 
 [ext_resource type="Texture2D" uid="uid://bhpe4ttcu763s" path="res://Resources/Artwork/Bagel knife/Cream Cheese 2.PNG" id="1_10eje"]
-[ext_resource type="Script" path="res://cc_knife.gd" id="1_ggnqu"]
+[ext_resource type="Script" path="res://Resources/Scripts/cc_knife.gd" id="1_ggnqu"]
 [ext_resource type="Texture2D" uid="uid://1lgxuo6nsogn" path="res://Resources/Artwork/Bagel knife/Cream Cheese 1.PNG" id="2_sviua"]
 [ext_resource type="Texture2D" uid="uid://dj6mnl2o8yirj" path="res://Resources/Artwork/Bagel knife/Knife.PNG" id="3_bv8w2"]
 

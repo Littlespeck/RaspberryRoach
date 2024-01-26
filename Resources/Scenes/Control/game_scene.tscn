@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://dq2pr0e1iok7"]
 
 [ext_resource type="Script" path="res://Resources/Scripts/game_scene.gd" id="1_x8dkm"]
-[ext_resource type="Theme" uid="uid://uebiqdcelw1p" path="res://Resources/Scenes/UI/BasicTheme.tres" id="4_gqrwp"]
-[ext_resource type="Texture2D" uid="uid://bskdfhj8xxdn5" path="res://Resources/GobletSmall.png" id="4_oedde"]
+[ext_resource type="Theme" uid="uid://uebiqdcelw1p" path="res://Resources/Localization/Theme/BasicTheme.tres" id="4_gqrwp"]
+[ext_resource type="Texture2D" uid="uid://bskdfhj8xxdn5" path="res://Resources/Artwork/GobletSmall.png" id="4_oedde"]
 [ext_resource type="AudioStream" uid="uid://dch577rbgxgk0" path="res://Resources/Sounds/Retro Polka.ogg" id="4_p4u82"]
 
 [sub_resource type="Curve2D" id="Curve2D_miy5y"]

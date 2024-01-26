@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://b5xw5no1imurt"
+
+[deps]
+
+files=["res://Resources/Localization/translations.en.translation", "res://Resources/Localization/translations.es.translation", "res://Resources/Localization/translations.de.translation", "res://Resources/Localization/translations.fr.translation", "res://Resources/Localization/translations.pt.translation"]
+
+source_file="res://Resources/Localization/translations.csv"
+dest_files=["res://Resources/Localization/translations.en.translation", "res://Resources/Localization/translations.es.translation", "res://Resources/Localization/translations.de.translation", "res://Resources/Localization/translations.fr.translation", "res://Resources/Localization/translations.pt.translation"]
+
+[params]
+
+compress=true
+delimiter=0

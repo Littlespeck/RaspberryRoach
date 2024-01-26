@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Resources/Scripts/main_menu_base.gd" id="1_3wa3v"]
 [ext_resource type="Texture2D" uid="uid://d3scatlwmmwyf" path="res://Resources/Artwork/Title.png" id="2_rpp3w"]
 [ext_resource type="Texture2D" uid="uid://dgkxk2xcu5je7" path="res://Resources/Artwork/Background.bmp" id="2_vs4my"]
-[ext_resource type="Theme" uid="uid://uebiqdcelw1p" path="res://Resources/Scenes/UI/BasicTheme.tres" id="4_7y4pi"]
+[ext_resource type="Theme" uid="uid://uebiqdcelw1p" path="res://Resources/Localization/Theme/BasicTheme.tres" id="4_7y4pi"]
 
 [node name="main_menu_base" type="Control"]
 layout_mode = 3
@@ -58,21 +58,24 @@ offset_top = 366.0
 offset_right = 304.0
 offset_bottom = 532.0
 
+[node name="MarginContainer" type="MarginContainer" parent="options_container"]
+custom_minimum_size = Vector2(0, 23.61)
+layout_mode = 2
+
 [node name="start_game_button" type="Button" parent="options_container"]
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
-text = "Start Game"
+text = "START"
 
 [node name="options_menu_button" type="Button" parent="options_container"]
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
-text = "Options"
+text = "OPTION"
 
 [node name="quit_game_button" type="Button" parent="options_container"]
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
-text = "Quit
-"
+text = "QUIT"
 
 [node name="FoodSpawnTimer" type="Timer" parent="."]
 wait_time = 0.75
