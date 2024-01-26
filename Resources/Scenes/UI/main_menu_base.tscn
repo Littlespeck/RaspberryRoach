@@ -1,30 +1,33 @@
-[gd_scene load_steps=4 format=3 uid="uid://d2a6qtqq5nxm2"]
+[gd_scene load_steps=5 format=3 uid="uid://d2a6qtqq5nxm2"]
 
 [ext_resource type="Script" path="res://Resources/Scripts/main_menu_base.gd" id="1_3wa3v"]
 [ext_resource type="Texture2D" uid="uid://d3scatlwmmwyf" path="res://Resources/Artwork/Title.png" id="2_rpp3w"]
 [ext_resource type="Texture2D" uid="uid://dgkxk2xcu5je7" path="res://Resources/Artwork/Background.bmp" id="2_vs4my"]
+[ext_resource type="Theme" uid="uid://uebiqdcelw1p" path="res://Resources/Scenes/UI/BasicTheme.tres" id="4_7y4pi"]
 
 [node name="main_menu_base" type="Control"]
 layout_mode = 3
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -576.0
-offset_right = 576.0
-offset_bottom = 648.0
+offset_left = -357.0
+offset_top = 200.0
+offset_right = 362.0
+offset_bottom = 924.0
 grow_horizontal = 2
-grow_vertical = 2
+theme = ExtResource("4_7y4pi")
 script = ExtResource("1_3wa3v")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(568, 647)
+position = Vector2(358, 442.5)
+scale = Vector2(0.802222, 0.809375)
 texture = ExtResource("2_vs4my")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 0
-offset_left = 252.0
-offset_right = 900.0
-offset_bottom = 648.0
+offset_left = 33.0
+offset_right = 681.0
+offset_bottom = 724.0
 color = Color(0, 0, 0, 0.0823529)
 
 [node name="FoodContainer" type="Control" parent="."]
@@ -56,14 +59,17 @@ offset_right = 304.0
 offset_bottom = 532.0
 
 [node name="start_game_button" type="Button" parent="options_container"]
+custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 text = "Start Game"
 
 [node name="options_menu_button" type="Button" parent="options_container"]
+custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 text = "Options"
 
 [node name="quit_game_button" type="Button" parent="options_container"]
+custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 text = "Quit
 "

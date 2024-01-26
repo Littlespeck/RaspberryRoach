@@ -9,36 +9,14 @@
 script = ExtResource("1_n1ahp")
 
 [node name="main_menu_base" parent="." instance=ExtResource("2_cwuy5")]
-grow_vertical = 1
-
-[node name="ColorRect" parent="main_menu_base" index="1"]
-offset_left = 257.0
-offset_top = 246.0
-offset_right = 905.0
-offset_bottom = 958.0
-
-[node name="TextureRect" parent="main_menu_base" index="3"]
-offset_left = -277.304
-offset_top = 272.0
-offset_right = 422.696
-offset_bottom = 684.0
-
-[node name="options_container" parent="main_menu_base" index="4"]
-offset_left = -295.0
-offset_top = 612.0
-offset_right = 309.0
-offset_bottom = 778.0
 
 [node name="start_game_button" parent="main_menu_base/options_container" index="0"]
-custom_minimum_size = Vector2(0, 100)
 theme = ExtResource("3_4ibnt")
 
 [node name="options_menu_button" parent="main_menu_base/options_container" index="1"]
-custom_minimum_size = Vector2(0, 100)
 theme = ExtResource("3_4ibnt")
 
 [node name="quit_game_button" parent="main_menu_base/options_container" index="2"]
-custom_minimum_size = Vector2(0, 100)
 theme = ExtResource("3_4ibnt")
 
 [node name="Munch" type="AudioStreamPlayer" parent="."]
