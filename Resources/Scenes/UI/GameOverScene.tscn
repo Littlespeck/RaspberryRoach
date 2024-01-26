@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://byifeyemr50r7"]
+[gd_scene load_steps=5 format=3 uid="uid://byifeyemr50r7"]
 
 [ext_resource type="Texture2D" uid="uid://dgkxk2xcu5je7" path="res://Resources/Artwork/Background.bmp" id="1_i02xr"]
 [ext_resource type="Theme" uid="uid://uebiqdcelw1p" path="res://Resources/Localization/Theme/BasicTheme.tres" id="1_v0dna"]
-[ext_resource type="Theme" uid="uid://wdaa8ukkhhpa" path="res://Resources/Scenes/UI/BasicTheme.tres" id="3_cg1vp"]
+[ext_resource type="Theme" uid="uid://dfmftmyq25pj4" path="res://Resources/Placeholder/UI_Theme.tres" id="3_d7t21"]
+[ext_resource type="Texture2D" uid="uid://cysgevexlic77" path="res://Resources/Artwork/Goblet.png" id="4_tohbo"]
 
 [node name="GameOverScene" type="Control"]
 layout_mode = 3
@@ -54,12 +55,13 @@ theme = ExtResource("1_v0dna")
 text = "MAIN_MENU"
 
 [node name="Control" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_left = 318.0
-offset_top = 362.0
-offset_right = 358.0
-offset_bottom = 402.0
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_top = 247.0
+offset_bottom = 247.0
+grow_horizontal = 2
 
 [node name="TextureRect" type="TextureRect" parent="Control"]
 clip_contents = true
@@ -76,12 +78,18 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_top = -31.0
-offset_right = 234.0
-offset_bottom = 57.0
+offset_left = -117.0
+offset_top = 136.0
+offset_right = 117.0
+offset_bottom = 224.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("3_cg1vp")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 64
+horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="Control"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_tohbo")
