@@ -12,7 +12,7 @@ var camera_altitude = screen_size / 3.75
 var camera_offset = 0
 var CCKnife_altitude = screen_size / 5
 var CCKnife_offset = 600
-var platform_spread = 80
+@export var platform_spread = 80
 var powerup_spread = 2000
 
 var score: int
