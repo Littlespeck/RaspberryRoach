@@ -71,3 +71,5 @@ text = "Quit
 [node name="FoodSpawnTimer" type="Timer" parent="."]
 wait_time = 0.75
 autostart = true
+
+[connection signal="timeout" from="FoodSpawnTimer" to="." method="_on_food_spawn_timer_timeout"]
