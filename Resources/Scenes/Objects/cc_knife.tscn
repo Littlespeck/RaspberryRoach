@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://d33ltltwcvhgy"]
+[gd_scene load_steps=9 format=3 uid="uid://dpmnmgfsi1mli"]
 
 [ext_resource type="Texture2D" uid="uid://bhpe4ttcu763s" path="res://Resources/Artwork/Bagel knife/Cream Cheese 2.PNG" id="1_10eje"]
 [ext_resource type="Script" path="res://Resources/Scripts/cc_knife.gd" id="1_ggnqu"]
@@ -275,6 +275,7 @@ _data = {
 size = Vector2(1282, 517)
 
 [node name="CCKnife" type="Node2D"]
+scale = Vector2(1.2, 1.2)
 script = ExtResource("1_ggnqu")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
