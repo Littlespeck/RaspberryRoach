@@ -46,9 +46,9 @@ size_flags_vertical = 0
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
 text = "FULLSCREEN"
+autowrap_mode = 3
 
 [node name="OptionButton" type="OptionButton" parent="MarginContainer/VBoxContainer/resolution_option2"]
-custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
 size_flags_vertical = 4
 item_count = 3
@@ -57,7 +57,7 @@ popup/item_0/text = "WINDOWED"
 popup/item_0/id = 2
 popup/item_1/text = "FULLSCREEN"
 popup/item_1/id = 0
-popup/item_2/text = "Borderless Windowed"
+popup/item_2/text = "Borderless"
 popup/item_2/id = 1
 
 [node name="vsync_option" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
