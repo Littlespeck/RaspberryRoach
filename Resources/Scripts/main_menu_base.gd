@@ -32,7 +32,7 @@ func ChooseFruit():
 		5:
 			Instance = BROKKOLI.instantiate()
 	$FoodContainer.add_child(Instance)
-	Instance.position = Vector2i(randNumPOS,-25)
+	Instance.position = Vector2i(randNumPOS, -250)
 	randomize()
 
 func _on_food_spawn_timer_timeout():

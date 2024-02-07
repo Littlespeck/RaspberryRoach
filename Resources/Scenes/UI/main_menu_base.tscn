@@ -1,9 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://d2a6qtqq5nxm2"]
+[gd_scene load_steps=10 format=3 uid="uid://d2a6qtqq5nxm2"]
 
 [ext_resource type="Script" path="res://Resources/Scripts/main_menu_base.gd" id="1_3wa3v"]
 [ext_resource type="Texture2D" uid="uid://d3scatlwmmwyf" path="res://Resources/Artwork/Title.png" id="2_rpp3w"]
 [ext_resource type="Texture2D" uid="uid://dgkxk2xcu5je7" path="res://Resources/Artwork/Background.bmp" id="2_vs4my"]
 [ext_resource type="Theme" uid="uid://uebiqdcelw1p" path="res://Resources/Localization/Theme/BasicTheme.tres" id="4_7y4pi"]
+[ext_resource type="PackedScene" uid="uid://kim3hv1hxlbp" path="res://Resources/Scenes/Objects/Fruit/brokkoli.tscn" id="4_x1e27"]
+[ext_resource type="PackedScene" uid="uid://1u1xplonv517" path="res://Resources/Scenes/Objects/Fruit/carrot.tscn" id="5_xh2bx"]
+[ext_resource type="PackedScene" uid="uid://dmhhrvwgj85rc" path="res://Resources/Scenes/Objects/Fruit/mandarin.tscn" id="6_xf2b0"]
+[ext_resource type="PackedScene" uid="uid://b6vo73s4a8cop" path="res://Resources/Scenes/Objects/Fruit/mushroom.tscn" id="7_gde1d"]
+[ext_resource type="PackedScene" uid="uid://ttfjkdqivhov" path="res://Resources/Scenes/Objects/Fruit/strawberry.tscn" id="8_xl3rt"]
 
 [node name="main_menu_base" type="Control"]
 layout_mode = 3
@@ -32,9 +37,39 @@ color = Color(0, 0, 0, 0.0823529)
 
 [node name="FoodContainer" type="Control" parent="."]
 anchors_preset = 0
-offset_left = 217.0
-offset_right = 257.0
-offset_bottom = 40.0
+offset_top = -205.0
+offset_right = 719.0
+offset_bottom = 1090.0
+
+[node name="Brokkoli" parent="FoodContainer" instance=ExtResource("4_x1e27")]
+position = Vector2(116, 167)
+
+[node name="Carrot" parent="FoodContainer" instance=ExtResource("5_xh2bx")]
+position = Vector2(145, 714.5)
+
+[node name="Mandarin" parent="FoodContainer" instance=ExtResource("6_xf2b0")]
+position = Vector2(599, 579.5)
+
+[node name="Mushroom" parent="FoodContainer" instance=ExtResource("7_gde1d")]
+position = Vector2(244, 598)
+
+[node name="Strawberry" parent="FoodContainer" instance=ExtResource("8_xl3rt")]
+position = Vector2(588, 333)
+
+[node name="Brokkoli2" parent="FoodContainer" instance=ExtResource("4_x1e27")]
+position = Vector2(599, 1030)
+
+[node name="Carrot2" parent="FoodContainer" instance=ExtResource("5_xh2bx")]
+position = Vector2(86, 1030)
+
+[node name="Mandarin2" parent="FoodContainer" instance=ExtResource("6_xf2b0")]
+position = Vector2(359, 0)
+
+[node name="Mushroom2" parent="FoodContainer" instance=ExtResource("7_gde1d")]
+position = Vector2(639, -94)
+
+[node name="Strawberry2" parent="FoodContainer" instance=ExtResource("8_xl3rt")]
+position = Vector2(353, 1120)
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 2

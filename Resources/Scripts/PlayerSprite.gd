@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 
 const SPEED = 300.0
-@export var JUMP_VELOCITY = -600.0
+@export var JUMP_VELOCITY = -650.0
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -23,11 +23,15 @@ func _ready():
 func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():
-		velocity.y += gravity * delta
+		if velocity.y >= 0:
+			velocity.y += gravity * delta * 2
+		else:
+			velocity.y += gravity * delta
+		
 		if jump_buffer > 0: #if jump buffer is still active, count down the realtime between frames.
 			jump_buffer -= delta
 
-		
+
 	if !is_on_floor() and last_floor and !jumping:
 		coyote = true
 		$CoyoteTimer.start()
