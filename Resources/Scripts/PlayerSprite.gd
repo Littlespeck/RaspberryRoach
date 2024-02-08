@@ -51,7 +51,7 @@ func _physics_process(delta):
 		jump_buffer = 0.18
 
 	# Get the input direction and handle the movement/deceleration.
-	var direction = Input.get_axis("Move_Left", "Move_Right")
+	var direction = Input.get_accelerometer().x
 	if direction:
 		velocity.x = direction * SPEED
 	else:
